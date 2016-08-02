@@ -1,0 +1,48 @@
+{
+    "name": "Flexbox-grid",
+    "version": "1.0.0",
+    "description": "A CSS grid framework based on Flexbox.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/betsydupuis/flexbox-grid.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "normalize.css": "^3.0.3"
+    },
+    "devDependencies": {
+        "autoprefixer": "^6.3.6",
+        "babel-core": "6.3.26",
+        "babel-eslint": "5.0.0",
+        "babel-preset-es2015": "6.3.13",
+        "babel-register": "^6.9.0",
+        "babelify": "7.2.0",
+        "cssnano": "^3.5.2",
+        "del": "^2.2.0",
+        "glob": "^7.0.3",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "3.1.0",
+        "gulp-changed": "1.0.0",
+        "gulp-compass": "2.1.0",
+        "gulp-flatten": "0.2.0",
+        "gulp-htmlmin": "^1.3.0",
+        "gulp-if": "2.0.0",
+        "gulp-load-plugins": "1.2.0",
+        "gulp-notify": "2.2.0",
+        "gulp-postcss": "6.1.0",
+        "gulp-rename": "1.2.0",
+        "gulp-sass": "^2.3.0",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-streamify": "1.0.2",
+        "gulp-uglify": "1.5.3",
+        "gulp-util": "3.0.7",
+        "gulp-watch": "4.3.5",
+        "postcss-discard-comments": "^2.0.4",
+        "run-sequence": "1.1.5"
+    }
+}
