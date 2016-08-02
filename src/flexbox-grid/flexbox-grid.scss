@@ -8,6 +8,7 @@
 // Base
 //===========================
 @import "base/**/*";
+@import "behaviors/behaviors.scss";
 
 //===========================
 // Elements
@@ -18,5 +19,6 @@
 // Components
 //===========================
 @import "components/grid/grid.scss";
+@import "components/highlight/elements/highlight-box/highlight-box.scss";
 
 // @import "components/**/*";

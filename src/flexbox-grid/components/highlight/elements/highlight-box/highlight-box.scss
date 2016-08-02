@@ -1,0 +1,17 @@
+@mixin highlight-box {
+    background-color: lighten(desaturate(red, 20%), 30%);
+    color: #eee;
+    border: 1px solid #eee;
+}
+
+.highlight-box {
+    @include highlight-box;
+
+    &.row {
+        background-color: lighten(desaturate(green, 50%), 50%);
+    }
+
+    &.col {
+        background-color: lighten(desaturate(orange, 20%), 30%);
+    }
+}
