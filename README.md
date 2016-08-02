@@ -32,6 +32,7 @@ $ http-server -p 1234
 
 
 ### Acknowledgements
+- Built on [normalize.css](https://github.com/necolas/normalize.css/)
 
 - Gulp tasks borrows and draws inspiration from [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate)
 
