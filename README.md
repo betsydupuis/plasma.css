@@ -29,5 +29,5 @@ $ http-server -p 1234
 
 ### Acknowledgements
 
-- Gulp tasks borrows and draws inspiration from (angularjs-gulp-browserify-boilerplate)[https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate]
+- Gulp tasks borrows and draws inspiration from [https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate](angularjs-gulp-browserify-boilerplate)
 
