@@ -1,10 +1,9 @@
-
 @mixin make-column($column-count, $grid-columns-total) {
     width: $column-count / $grid-columns-total * 100%;
 }
 
 @function make-offset($column-count, $grid-columns-total) {
-    @return ($column-count / $grid-columns-total) * 100%;
+    @return $column-count / $grid-columns-total * 100%;
 }
 
 @mixin col-flex {
@@ -68,7 +67,9 @@
 
 @mixin container-flush-both {
     overflow-x: hidden;
+
     @include container-flush-left;
+
     @include container-flush-right;
 }
 
@@ -85,8 +86,11 @@ $row-flushing-offset: ($viewport-margin + $grid-gutter-width / 2) * -1;
 
 @mixin row-flush-both {
     flex: 1 1 0%;
+
     @include row-flush-left;
+
     @include row-flush-right;
+
     > col {
         flex: 1 1 auto;
     }
@@ -101,11 +105,12 @@ $row-flushing-offset: ($viewport-margin + $grid-gutter-width / 2) * -1;
 
 @mixin col-flush-right {
     // Works only for column closest to the right
-        padding-right: $viewport-margin + $grid-gutter-width / 2;
+    padding-right: $viewport-margin + $grid-gutter-width / 2;
 }
 
 @mixin col-flush-both {
     // Works only for full-width columns such as col-xs-12 or col-fixed-24.
     @include col-flush-left;
+
     @include col-flush-right;
-}s
+}
