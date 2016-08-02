@@ -2,6 +2,10 @@
 Grid Layout using flexbox
 
 
+## Browser Support
+
+Flexbox Grid is depenedent on the CSS property flexbox. See [Can I use Flexbox?](http://caniuse.com/#feat=flexbox) for more details.
+
 ## Quick Start
 
 ### Install Assemble
