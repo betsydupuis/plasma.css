@@ -7,12 +7,12 @@ Grid Layout using flexbox
 Flexbox Grid is depenedent on the CSS property flexbox. See [Can I use Flexbox?](http://caniuse.com/#feat=flexbox) for more details.
 
 ## Quick Start
-
+<!--
 ### Install Assemble
 ```
 $ npm install --global assemble
 
-```
+``` -->
 
 ### Install Sass and compass
 ```
