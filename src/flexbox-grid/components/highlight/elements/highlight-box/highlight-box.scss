@@ -1,7 +1,8 @@
 @mixin highlight-box {
-    background-color: lighten(desaturate(red, 20%), 30%);
-    color: #eee;
-    border: 1px solid #eee;
+    background-color: lighten(desaturate(blue, 30%), 40%);
+    color: rgba(#222, 0.5);
+
+    // border: 1px solid #eee;
 }
 
 .highlight-box {
@@ -12,6 +13,15 @@
     }
 
     &.col {
-        background-color: lighten(desaturate(orange, 20%), 30%);
+        $highlight-box-col: lighten(desaturate(orange, 20%), 30%);
+
+        background-color: rgba($highlight-box-col, 0.9);
+        background-color: white;
+    }
+
+    &.col-fill {
+        .highlight-box {
+            background-color: lighten(desaturate(blue, 20%), 30%);
+        }
     }
 }
