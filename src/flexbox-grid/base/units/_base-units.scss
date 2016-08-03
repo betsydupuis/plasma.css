@@ -19,7 +19,7 @@ $proportions-total: 12;
 }
 
 @for $i from 1 through $proportions-total {
-    .px-#{$i} {
+    .px-lg-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 20);
     }
 }

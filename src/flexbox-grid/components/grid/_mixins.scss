@@ -22,9 +22,15 @@
 }
 
 @mixin col-fill {
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    // V1 Doesn't wrap text
+    // -webkit-flex: 1 1 auto;
+    // -ms-flex: 1 1 auto;
+    // flex: 1 1 auto;
+
+    // V2 Does wrap text
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
 }
 
 @mixin row-flex {

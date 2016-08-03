@@ -16,7 +16,7 @@
         $highlight-box-col: lighten(desaturate(orange, 20%), 30%);
 
         background-color: rgba($highlight-box-col, 0.9);
-        background-color: white;
+        background-color: rgba(white, 0.5);
     }
 
     &.col-fill {
