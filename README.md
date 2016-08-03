@@ -21,14 +21,14 @@ gem install sass
 gem install sass-globbing
 
 ```
-
+<!--
 ### Start Server
 ```
 $ npm install http-server -g
 
 $ http-server -p 1234
 
-```
+``` -->
 
 
 ### Acknowledgements
