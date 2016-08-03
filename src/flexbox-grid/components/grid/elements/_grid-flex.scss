@@ -4,7 +4,7 @@
 // Flexbox based grid system
 //===========================
 
-@mixin row-gutter {
+@mixin row-offset {
     margin-left: $grid-gutter-width / 2 * -1;
     margin-right: $grid-gutter-width / 2 * -1;
 }
@@ -28,12 +28,16 @@
     @include col-flex;
 }
 
-.row-gutter {
-    @include row-gutter;
+.row-offset {
+    @include row-offset;
 }
 
 .col-gutter {
     @include col-gutter;
+}
+
+.row-gutter {
+    margin-bottom: $grid-gutter-width;
 }
 
 .row-flex {
@@ -79,7 +83,7 @@
 .row {
     @extend .row-flex;
 
-    @extend .row-gutter;
+    @extend .row-offset;
 
     > footer {
         margin: 0;
