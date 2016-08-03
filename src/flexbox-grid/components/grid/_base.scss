@@ -1,1 +1,7 @@
-.grid-body {}
+html,
+body,
+.full-height {
+    height: 100%;
+
+    // Must be a top-level component
+}
