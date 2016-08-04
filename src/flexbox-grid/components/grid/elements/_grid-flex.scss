@@ -55,20 +55,12 @@
 .row-col,
 .row-stacked {
     height: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-line-pack: stretch;
-    -webkit-align-content: stretch;
     align-content: stretch;
 }
 
 .flex-none {
-    -webkit-flex: none !important;
-    -ms-flex: none !important;
     flex: none !important;
 }
 
@@ -136,20 +128,14 @@
 }
 
 .row-nowrap {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
 }
 
 .row-center {
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .row-end {
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
@@ -239,8 +225,6 @@ $row-flushing-offset: ($viewport-margin + $grid-gutter-width / 2) * -1;
     @extend .row-col;
 
     overflow: hidden;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
 }
 
@@ -252,8 +236,6 @@ $row-flushing-offset: ($viewport-margin + $grid-gutter-width / 2) * -1;
 
 .scroll-area {
     overflow-y: auto !important;
-    -webkit-flex: 1 1 0px;
-    -ms-flex: 1 1 0px;
     flex: 1 1 0px;
 }
 
