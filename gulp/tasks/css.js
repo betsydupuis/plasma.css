@@ -10,7 +10,13 @@ module.exports = function(gulp, plugins, paths) {
     var autoprefixer = require('autoprefixer');
     var discardComments = require('postcss-discard-comments');
     var cssnano = require('cssnano');
-    var postProcessors = [
+    // Dev
+    var devPostProcessors = [
+        autoprefixer(),
+    ];
+    // Dist
+    var distPostProcessors = [
+        autoprefixer(),
         discardComments(),
         cssnano(),
     ];
@@ -86,7 +92,8 @@ module.exports = function(gulp, plugins, paths) {
                     sourcemap: shouldCreateSourcemap
                 })
             )
-            .pipe(plugins.if(shouldMinify, plugins.postcss(postProcessors)))
+            .pipe(plugins.if(shouldMinify, plugins.postcss(distPostProcessors)))
+            .pipe(plugins.if(!shouldMinify, plugins.postcss(devPostProcessors)))
             .pipe(gulp.dest(destination));
     };
 };
