@@ -9,7 +9,8 @@
     @include highlight-box;
 
     &.row {
-        background-color: lighten(desaturate(green, 50%), 50%);
+        // background-color: lighten(desaturate(green, 50%), 50%);
+
     }
 
     &.col {
