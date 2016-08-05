@@ -1,3 +1,18 @@
+@mixin viewport-margin {
+    padding-left: $viewport-margin;
+    padding-right: $viewport-margin;
+}
+
+@mixin row-offset {
+    margin-left: $grid-gutter-width / 2 * -1;
+    margin-right: $grid-gutter-width / 2 * -1;
+}
+
+@mixin col-gutter {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+}
+
 @mixin make-column($column-count, $grid-columns-total) {
     width: $column-count / $grid-columns-total * 100%;
 }
@@ -33,6 +48,13 @@
     flex-wrap: wrap;
     min-height: 1px;
     position: relative;
+}
+
+@mixin row-stacked {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
 }
 
 //===========================
