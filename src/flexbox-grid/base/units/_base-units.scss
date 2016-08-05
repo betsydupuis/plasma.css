@@ -18,7 +18,7 @@ $proportions-total: 12;
     }
 
     .px-h-xl-#{$i} {
-        height: make-proportions($i, $proportions-total, $base-unit * 25);
+        min-height: make-proportions($i, $proportions-total, $base-unit * 25);
     }
 }
 
@@ -28,7 +28,7 @@ $proportions-total: 12;
     }
 
     .px-h-lg-#{$i} {
-        height: make-proportions($i, $proportions-total, $base-unit * 20);
+        min-height: make-proportions($i, $proportions-total, $base-unit * 20);
     }
 }
 
@@ -38,7 +38,7 @@ $proportions-total: 12;
     }
 
     .px-h-md-#{$i} {
-        height: make-proportions($i, $proportions-total, $base-unit * 15);
+        min-height: make-proportions($i, $proportions-total, $base-unit * 15);
     }
 }
 
@@ -48,7 +48,7 @@ $proportions-total: 12;
     }
 
     .px-h-sm-#{$i} {
-        height: make-proportions($i, $proportions-total, $base-unit * 10);
+        min-height: make-proportions($i, $proportions-total, $base-unit * 10);
     }
 }
 
@@ -58,6 +58,6 @@ $proportions-total: 12;
     }
 
     .px-h-xs-#{$i} {
-        height: make-proportions($i, $proportions-total, $base-unit * 5);
+        min-height: make-proportions($i, $proportions-total, $base-unit * 5);
     }
 }
