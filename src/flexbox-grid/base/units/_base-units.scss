@@ -16,11 +16,19 @@ $proportions-total: 12;
     .px-xl-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 25);
     }
+
+    .px-h-xl-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 25);
+    }
 }
 
 @for $i from 1 through $proportions-total {
     .px-lg-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 20);
+    }
+
+    .px-h-lg-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 20);
     }
 }
 
@@ -28,16 +36,28 @@ $proportions-total: 12;
     .px-md-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 15);
     }
+
+    .px-h-md-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 15);
+    }
 }
 
 @for $i from 1 through $proportions-total {
     .px-sm-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 10);
     }
+
+    .px-h-sm-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 10);
+    }
 }
 
 @for $i from 1 through $proportions-total {
     .px-xs-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 5);
+    }
+
+    .px-h-xs-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 5);
     }
 }
