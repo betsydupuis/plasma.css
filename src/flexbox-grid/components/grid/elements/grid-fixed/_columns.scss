@@ -1,13 +1,23 @@
 $proportions-total: 12;
 
 @for $i from 1 through $proportions-total {
-    .unit-#{$i} {
-        width: make-proportions($i, $proportions-total, $base-unit);
+    .fixed-xl-#{$i} {
+        width: make-proportions($i, $proportions-total, $base-unit * 25);
     }
-}
 
-@for $i from 1 through $proportions-total {
-    .px-xs-#{$i} {
+    .fixed-lg-#{$i} {
+        width: make-proportions($i, $proportions-total, $base-unit * 20);
+    }
+
+    .fixed-md-#{$i} {
+        width: make-proportions($i, $proportions-total, $base-unit * 15);
+    }
+
+    .fixed-sm-#{$i} {
+        width: make-proportions($i, $proportions-total, $base-unit * 10);
+    }
+
+    .fixed-xs-#{$i} {
         width: make-proportions($i, $proportions-total, $base-unit * 5);
     }
 }
@@ -17,17 +27,9 @@ $proportions-total: 12;
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
 
-@media (max-width: $screen-sm-min - 1) {
-    @for $i from 1 through $proportions-total {
-        .px-sm-#{$i} {
-            width: make-proportions($i, $proportions-total, $base-unit * 5);
-        }
-    }
-}
-
 @media (min-width: $screen-sm-min) {
     @for $i from 1 through $proportions-total {
-        .px-sm-#{$i} {
+        .fixed-sm-#{$i} {
             width: make-proportions($i, $proportions-total, $base-unit * 10);
         }
     }
@@ -39,7 +41,7 @@ $proportions-total: 12;
 
 @media (min-width: $screen-md-min) {
     @for $i from 1 through $proportions-total {
-        .px-md-#{$i} {
+        .fixed-md-#{$i} {
             width: make-proportions($i, $proportions-total, $base-unit * 15);
         }
     }
@@ -51,7 +53,7 @@ $proportions-total: 12;
 
 @media (min-width: $screen-lg-min) {
     @for $i from 1 through $proportions-total {
-        .px-lg-#{$i} {
+        .fixed-lg-#{$i} {
             width: make-proportions($i, $proportions-total, $base-unit * 20);
         }
     }
@@ -63,7 +65,7 @@ $proportions-total: 12;
 
 @media (min-width: $screen-xl-min) {
     @for $i from 1 through $proportions-total {
-        .px-xl-#{$i} {
+        .fixed-xl-#{$i} {
             width: make-proportions($i, $proportions-total, $base-unit * 25);
         }
     }

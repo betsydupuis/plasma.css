@@ -21,14 +21,6 @@
     }
 }
 
-.col-fill {
-    @include col-fill;
-}
-
-.col-stack {
-    width: 100%;
-}
-
 // XS Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
@@ -95,4 +87,12 @@
             @include make-column($i, $grid-columns);
         }
     }
+}
+
+.col-fill {
+    @include col-fill;
+}
+
+.col-stack {
+    width: 100%;
 }
