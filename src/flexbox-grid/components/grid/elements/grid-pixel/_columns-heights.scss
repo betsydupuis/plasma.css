@@ -1,0 +1,64 @@
+$proportions-total: 12;
+
+@for $i from 1 through $proportions-total {
+    .px-h-xs-#{$i} {
+        min-height: make-proportions($i, $proportions-total, $base-unit * 5);
+    }
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (max-width: $screen-sm-min - 1) {
+    @for $i from 1 through $proportions-total {
+        .px-h-sm-#{$i} {
+            min-height: make-proportions($i, $proportions-total, $base-unit * 5);
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    @for $i from 1 through $proportions-total {
+        .px-h-sm-#{$i} {
+            min-height: make-proportions($i, $proportions-total, $base-unit * 10);
+        }
+    }
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+    @for $i from 1 through $proportions-total {
+        .px-h-md-#{$i} {
+            min-height: make-proportions($i, $proportions-total, $base-unit * 15);
+        }
+    }
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+    @for $i from 1 through $proportions-total {
+        .px-h-lg-#{$i} {
+            min-height: make-proportions($i, $proportions-total, $base-unit * 20);
+        }
+    }
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-xl-min) {
+    @for $i from 1 through $proportions-total {
+        .px-h-xl-#{$i} {
+            min-height: make-proportions($i, $proportions-total, $base-unit * 25);
+        }
+    }
+}

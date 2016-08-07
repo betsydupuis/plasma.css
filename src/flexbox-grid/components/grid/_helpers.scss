@@ -17,12 +17,29 @@
     flex-wrap: nowrap;
 }
 
+// Row Justify Properties
+.row-space-between {
+    justify-content: space-between;
+}
+
+.row-space-around {
+    justify-content: space-around;
+}
+
 .row-center {
     justify-content: center;
 }
 
 .row-end {
     justify-content: flex-end;
+}
+
+.row-center {
+    justify-content: center;
+}
+
+.row-end {
+    justify-content: flex-start;
 }
 
 .flex-none {
