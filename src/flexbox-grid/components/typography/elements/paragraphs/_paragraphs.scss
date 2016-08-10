@@ -1,25 +1,6 @@
-//  Headings
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-weight: 600;
-}
-
-h1, h2 {
-    line-height: 48px;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-h3, h4 {
-    line-height: 24px;
-}
-
-h3 {
-    font-size: 18px;
+p {
+    font-size: $scale-1 + rem; // 1rem
+    line-height: (24 / 16) + em; // 1.5rem
+    margin-top: 0;
+    margin-bottom: (24 / 16) + em; // 1.5rem
 }

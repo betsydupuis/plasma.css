@@ -1,0 +1,17 @@
+$proportions-total: 12;
+@for $i from 1 through $proportions-total {
+    .fixed-xs-#{$i} {
+        width: make-proportions($i, $proportions-total, $base-unit * 5);
+    } // .fixed-xl-#{$i} {
+    //     width: make-proportions($i, $proportions-total, $base-unit * 25);
+    // }
+    // .fixed-lg-#{$i} {
+    //     width: make-proportions($i, $proportions-total, $base-unit * 20);
+    // }
+    // .fixed-md-#{$i} {
+    //     width: make-proportions($i, $proportions-total, $base-unit * 15);
+    // }
+    // .fixed-sm-#{$i} {
+    //     width: make-proportions($i, $proportions-total, $base-unit * 10);
+    // }
+}

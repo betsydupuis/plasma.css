@@ -1,21 +1,22 @@
 @import "variables";
 @import "base";
 @import "mixins";
-
 // Elements
 // Grid Flexbox
+@import "elements/gutters";
 @import "elements/grid-flexbox/_containers.scss";
 @import "elements/grid-flexbox/_rows.scss";
 @import "elements/grid-flexbox/_columns.scss";
 @import "elements/grid-flexbox/_flushing.scss";
 @import "elements/grid-flexbox/_scrolling.scss";
-
-// Grid Pixel
-// @import "elements/grid-pixel/_columns.scss";
-// @import "elements/grid-pixel/_flushing.scss";
-// @import "elements/grid-pixel/_scrolling.scss";
-// @import "elements/grid-pixel/_containers.scss";
-// @import "elements/grid-pixel/_rows.scss";
-
+//
+//
+// Grid fixed
+@import "elements/grid-fixed/_columns.scss";
+@import "elements/grid-fixed/_columns-heights.scss";
+@import "elements/grid-flexbox/_columns-media-queries.scss";
+// @import "elements/grid-fixed/_columns-media-queries.scss";
+//
+//
 // Helpers
 @import "helpers";

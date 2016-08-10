@@ -3,11 +3,9 @@
 //------------------------------------------------
 //
 //===========================
-
 //  Grid Columns
 .col {
     @include col-flex;
-
     @include col-gutter;
 }
 
@@ -15,7 +13,6 @@
     .xs-#{$i} {
         @include make-column($i, $grid-columns);
     }
-
     .offset-left-xs-#{$i} {
         margin-left: make-offset($i, $grid-columns);
     }
@@ -27,72 +24,4 @@
 
 .col-stack {
     width: 100%;
-}
-
-// XS Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-
-@media (max-width: $screen-sm-min - 1px) {
-    .container-flush-both-xs {
-        @include container-flush-both;
-    }
-
-    .row-flush-both-xs {
-        @include row-flush-both;
-    }
-
-    .col-flush-both-xs {
-        @include col-flush-both;
-    }
-
-    .no-padding-xs {
-        padding: 0;
-    }
-}
-
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-
-@media (min-width: $screen-sm-min) {
-    @for $i from 1 through $grid-columns {
-        .sm-#{$i} {
-            @include make-column($i, $grid-columns);
-        }
-
-        .offset-left-sm-#{$i} {
-            margin-left: make-offset($i, $grid-columns);
-        }
-    }
-}
-
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-
-@media (min-width: $screen-md-min) {
-    @for $i from 1 through $grid-columns {
-        .md-#{$i} {
-            @include make-column($i, $grid-columns);
-        }
-
-        .offset-left-md-#{$i} {
-            margin-left: make-offset($i, $grid-columns);
-        }
-    }
-}
-
-// Large grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-
-@media (min-width: $screen-lg-min) {
-    @for $i from 1 through $grid-columns {
-        .lg-#{$i} {
-            @include make-column($i, $grid-columns);
-        }
-    }
 }
