@@ -21,5 +21,11 @@ module.exports = {
         name: 'index',
         src: './src/index.html',
         dist: './dist'
+    }],
+    fonts: [{
+        name: 'font-awesome',
+        src: './node_modules/font-awesome/fonts/*.*(svg|eot|ttf|woff|otf)',
+        dist: './dist/assets/fonts',
+        glob: '/**/*.*(svg|eot|ttf|woff|otf)'
     }]
 }

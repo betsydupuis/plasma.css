@@ -52,7 +52,7 @@ module.exports = function(gulp, plugins, paths) {
 
     function cleanScript(destination) {
         plugins.del([
-            destination + '/**/*.html',
+            '.dist/**/*.html',
         ]);
     };
 
