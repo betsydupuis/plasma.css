@@ -1,25 +1,71 @@
 //  Headings
-h1, h2, h3, h4, h5, h6 {
+//  Headings
+//  Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     font-weight: 600;
 }
 
-h1, h2 {
-    line-height: 48px;
-}
-
+// h1, h2 {
+//     line-height: 48px;
+// }
+// h1 {
+//     font-size: 48px;
+// }
+// h2 {
+//     font-size: 36px;
+// }
+// h3, h4 {
+//     line-height: 24px;
+// }
+// h3 {
+//     font-size: 18px;
+// }
 h1 {
-    font-size: 48px;
+    font-size: $scale-6 + rem; // 3rem
+    line-height: (48 / 48) + em; // 1rem
+    margin-bottom: (24 / 48) + em; //.5rem
 }
 
 h2 {
-    font-size: 36px;
-}
-
-h3, h4 {
-    line-height: 24px;
+    font-size: $scale-5 + rem; // 2.25rem
+    line-height: (48 / 36) + em; // 1.333333333333333rem
+    margin-bottom: (24 / 36) + em; //.6666666666666667rem
 }
 
 h3 {
-    font-size: 18px;
+    font-size: $scale-4 + rem; // 1.5rem
+    line-height: (24 / 24) + em; // 1rem
+    margin-bottom: (24 / 24) + em; // 1rem
 }
+
+h4 {
+    font-size: $scale-3 + rem; // 1.3125rem
+    font-weight: 900;
+    line-height: (24 / 21) + em; // 1.142857142857143rem
+    margin-bottom: (24 / 21) + em; //1.142857142857143rem
+    color: #666;
+}
+
+h5 {
+    font-size: $scale-2 + rem; // 1.125rem
+    font-weight: bold;
+    line-height: (24 / 18) + em; // 1.333333333333333rem
+    margin-bottom: (24 / 16) + em; //1.333333333333333rem
+}
+
+h6 {
+    font-weight: bold;
+}
+
+h6 {
+    font-size: $scale-1 + rem; // 1rem
+    line-height: (24 / 16) + em; // 1.5rem
+}
+
+h1 {}

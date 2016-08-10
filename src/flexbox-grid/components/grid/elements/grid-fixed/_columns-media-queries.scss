@@ -1,18 +1,11 @@
-$proportions-total: 12;
-@for $i from 1 through $proportions-total {
-    .fixed-h-xs-#{$i} {
-        min-height: make-proportions($i, $proportions-total, $base-unit * 5);
-    }
-}
-
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
 @media (min-width: $screen-sm-min) {
     @for $i from 1 through $proportions-total {
-        .fixed-h-sm-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 10);
+        .fixed-sm-#{$i} {
+            width: make-proportions($i, $proportions-total, $base-unit * 10);
         }
     }
 }
@@ -22,8 +15,8 @@ $proportions-total: 12;
 // Columns, offsets, pushes, and pulls for the desktop device range.
 @media (min-width: $screen-md-min) {
     @for $i from 1 through $proportions-total {
-        .fixed-h-md-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 15);
+        .fixed-md-#{$i} {
+            width: make-proportions($i, $proportions-total, $base-unit * 15);
         }
     }
 }
@@ -33,19 +26,19 @@ $proportions-total: 12;
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 @media (min-width: $screen-lg-min) {
     @for $i from 1 through $proportions-total {
-        .fixed-h-lg-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 20);
+        .fixed-lg-#{$i} {
+            width: make-proportions($i, $proportions-total, $base-unit * 20);
         }
     }
 }
 
-// Large grid
+// Extra Large grid
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 @media (min-width: $screen-xl-min) {
     @for $i from 1 through $proportions-total {
-        .fixed-h-xl-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 25);
+        .fixed-xl-#{$i} {
+            width: make-proportions($i, $proportions-total, $base-unit * 25);
         }
     }
 }

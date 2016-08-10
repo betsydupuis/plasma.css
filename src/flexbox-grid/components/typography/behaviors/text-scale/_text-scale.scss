@@ -1,0 +1,41 @@
+
+.text-scale-8 {
+    font-size:$scale-8 + em; // 3rem
+    line-height:(72 / 72) + em; // 1rem
+    margin-bottom:(24 / 48) + em; //.5rem
+}
+.text-scale-6 {
+    font-size:$scale-6 + em; // 3rem
+    line-height:(48 / 48) + em; // 1rem
+    margin-bottom:(24 / 48) + em; //.5rem
+}
+
+.text-scale-5 {
+    font-size:$scale-5 + em; // 2.25rem
+    line-height:(48 / 36) + em; // 1.333333333333333rem
+    margin-bottom:(24 / 36) + em; //.6666666666666667rem
+}
+
+.text-scale-4 {
+    font-size:$scale-4 + em; // 1.5rem
+    line-height:(24 / 24) + em; // 1rem
+    margin-bottom:(24 / 24) + em; // 1rem
+}
+
+.text-scale-3 {
+    font-size:$scale-3 + em; // 1.3125rem
+    line-height:(24 / 21) + em; // 1.142857142857143rem
+    margin-bottom:(24 / 21) + em; //1.142857142857143rem
+}
+
+.text-scale-2 {
+    font-size:$scale-2 + em; // 1.125rem
+    line-height:(24 / 18) + em; // 1.333333333333333rem
+    margin-bottom:(24 / 18) + em; //1.333333333333333rem
+}
+
+.text-scale-1{
+    font-size:$scale-1 + rem; // 1rem
+    line-height:(24 / 16) + em; // 1.5rem
+    margin-bottom:(24 / 16) + em; // 1.5rem
+}
