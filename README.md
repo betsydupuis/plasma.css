@@ -1,12 +1,16 @@
-#Flexbox Grid
-Grid Layout using flexbox
+
+# Plasma.css
+Flexible layouts framework for css.
+
+## Features
+- Grid Layout using flexbox
 
 
 ## Browser Support
 
 Flexbox Grid is depenedent on the CSS property flexbox. See [Can I use Flexbox?](http://caniuse.com/#feat=flexbox) for more details.
 
-## Quick Start
+## Development
 <!--
 ### Install Assemble
 ```
@@ -30,6 +34,8 @@ $ http-server -p 1234
 
 ``` -->
 
+
+### Dependencies and integrations
 
 ### Acknowledgements
 - Built on [normalize.css](https://github.com/necolas/normalize.css/)

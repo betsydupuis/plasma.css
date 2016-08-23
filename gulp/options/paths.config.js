@@ -2,8 +2,8 @@ module.exports = {
     src: './src',
     dist: './dist',
     scss: [{
-            name: 'flexbox-grid',
-            src: './src/flexbox-grid',
+            name: 'plasma',
+            src: './src/plasma',
             dist: './dist/assets/css',
             glob: '/!(*.spec).scss',
         },
