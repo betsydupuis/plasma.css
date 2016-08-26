@@ -1,0 +1,25 @@
+.footer {
+    background: #ff5400;
+    color: #fff;
+    min-height: 12px;
+    margin-top: 24px;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 6px 12px;
+
+    a,
+    a:visited,
+    .btn-link {
+        color: #fff;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

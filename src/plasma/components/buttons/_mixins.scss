@@ -1,0 +1,18 @@
+@mixin btn-behavior {
+    display: inline-block;
+    white-space: nowrap;
+    touch-action: manipulation;
+    user-select: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+@mixin btn-defaults {
+    border: none;
+    margin-bottom: 0;
+    background-image: none;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 400;
+    color: #666;
+}

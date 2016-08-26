@@ -1,0 +1,22 @@
+.container-cover {
+    position: relative;
+    &:hover {
+        .item-cover-bg {
+            filter: blur(3px);
+        }
+    }
+}
+
+.item-cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.item-cover-hover {
+    opacity: 0;
+    transition: 0.75s opacity;
+    &:hover {
+        opacity: 1;
+    }
+}

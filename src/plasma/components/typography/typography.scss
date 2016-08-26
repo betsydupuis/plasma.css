@@ -17,7 +17,6 @@ a,
 a:visited,
 .btn-link {
     color: #ff5400;
-    font-weight: 700;
     &:active,
     &:focus,
     &:hover {
@@ -25,20 +24,3 @@ a:visited,
         text-decoration: none;
     }
 }
-
-.icon-arrow-right:after {
-    content: " →";
-    vertical-align: middle;
-}
-
-.icon-arrow-down:after {
-    content: " ↓";
-    vertical-align: middle;
-}
-
-summary {
-    margin-bottom: 48px;
-}
-
-
-

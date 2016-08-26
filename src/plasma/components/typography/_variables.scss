@@ -5,11 +5,10 @@
 //===========================
 //
 // Fonts
-$font-family-sans-serif: "Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-$base-font-family: $font-family-sans-serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Source Sans Pro", $font-family-sans-serif;
+
+
 // Typography
 $scale-1: 1; // 1.6
 $scale-2: 18 / 16; // 1.125
@@ -21,6 +20,9 @@ $scale-6: 48 / 16; // 3
 $scale-7: 64 / 16; // 3
 $scale-8: 72 / 16; // 3
 $font-size-base: 16/10;
+
+
+
 // Colors
 $red: #db1700;
 $blue: #35a5d0;

@@ -1,6 +1,4 @@
 //  Headings
-//  Headings
-//  Headings
 h1,
 h2,
 h3,
@@ -42,6 +40,7 @@ h3 {
     font-size: $scale-4 + rem; // 1.5rem
     line-height: (24 / 24) + em; // 1rem
     margin-bottom: (24 / 24) + em; // 1rem
+    font-weight: 300;
 }
 
 h4 {
@@ -68,4 +67,6 @@ h6 {
     line-height: (24 / 16) + em; // 1.5rem
 }
 
-h1 {}
+h1 {
+    font-family: "aleo";
+}

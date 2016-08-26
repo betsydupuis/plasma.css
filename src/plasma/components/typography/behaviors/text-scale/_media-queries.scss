@@ -28,4 +28,12 @@
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
-@media (max-width: $screen-xs-min - 1) {}
+@media (max-width: $screen-xs-min - 1) {
+    html {
+        font-size: 0.75em;
+    }
+
+    .text-scale-down-sm {
+        font-size: 0.75em;
+    }
+}

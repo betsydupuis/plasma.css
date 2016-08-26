@@ -21,13 +21,13 @@
 
 .truncate-line-4 {
     display: -webkit-box;
+
     //Must be  -webkit-box  not display: flex;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow-y: hidden;
     text-overflow: ellipsis;
 }
-
 
 /* http://www.cssmojo.com/line-clamp_for_non_webkit-based_browsers/ */
 
@@ -40,15 +40,22 @@
     font-weight: 300;
 }
 
+.text-bold {
+    font-weight: 700;
+}
+
 .font-display {
+    font-family: "aleo";
     font-weight: 300;
-    &.text-bold,
-    b {
+
+    &.text-bold, b {
         font-weight: 700;
     }
 }
 
-.font-script {}
+.font-script {
+    font-family: 'beginning-yoga';
+}
 
 // Helpers - Typography
 .margin-bottom-0 {
@@ -56,7 +63,7 @@
 }
 
 .margin-bottom-inset-third {
-    margin-top: (24/72) * -1em !important;
+    margin-top: (24 / 72 * -1em) !important;
 }
 
 .v-align-middle {
