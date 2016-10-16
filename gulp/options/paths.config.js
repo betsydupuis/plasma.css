@@ -6,6 +6,11 @@ module.exports = {
             src: './src/plasma',
             dist: './dist/assets/css',
             glob: '/!(*.spec).scss',
+        }, {
+            name: 'docs',
+            src: './src/docs',
+            dist: './dist/assets/css',
+            glob: '/!(*.spec).scss',
         },
         // {//     name: 'other',
         //     src: './src/css',
