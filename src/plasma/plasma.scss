@@ -3,11 +3,12 @@
 //===========================
 @import "base/units/**/*";
 @import "base/variables";
+
 //===========================
 // Base
 //===========================
 @import "base/**/*";
-@import "behaviors/behaviors";
+
 //===========================
 // Elements
 //===========================
@@ -16,10 +17,10 @@
 // Components
 //===========================
 @import "components/components";
+
 //===========================
 // Helpers
 // -----------
 // Imported at the end for override purposes.
 //===========================
 //
-@import "behaviors/helpers";
