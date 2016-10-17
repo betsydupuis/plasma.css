@@ -4,8 +4,12 @@
 //
 //===========================
 //  Grid Columns
-.col {
+.col-flex {
     @include col-flex;
+}
+
+.col {
+    // @include col-flex;
     @include col-gutter;
 }
 
@@ -13,6 +17,7 @@
     .xs-#{$i} {
         @include make-column($i, $grid-columns);
     }
+
     .offset-left-xs-#{$i} {
         margin-left: make-offset($i, $grid-columns);
     }

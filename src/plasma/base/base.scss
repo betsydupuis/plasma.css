@@ -1,4 +1,8 @@
 @import "../../../node_modules/normalize.css/normalize.css";
-@import "settings/settings";
-@import "shapes/circle.scss";
-@import "colors/colors.scss";
+
+@import "defaults/defaults";
+
+@import "behaviors/behaviors";
+
+// @import "shapes/circle.scss";
+// @import "colors/colors.scss";
