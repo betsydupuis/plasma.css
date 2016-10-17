@@ -322,35 +322,30 @@ body,
 .row-align-y-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start;
 }
 
 .row-align-y-bottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end;
 }
 
 .row-align-y-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center;
 }
 
 .row-align-y-baseline {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
-              -ms-grid-row-align: baseline;
           align-items: baseline;
 }
 
 .row-align-y-fill {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
           align-items: stretch;
 }
 
@@ -366,6 +361,7 @@ body,
 
 .col-align-y-center {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -376,6 +372,7 @@ body,
 
 .col-align-y-fill {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
@@ -437,35 +434,30 @@ body,
 .stack-align-x-left {
   -webkit-box-align: start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start;
 }
 
 .stack-align-x-right {
   -webkit-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end;
 }
 
 .stack-align-x-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center;
 }
 
 .stack-align-x-baseline {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
-              -ms-grid-row-align: baseline;
           align-items: baseline;
 }
 
 .stack-align-x-fill {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
           align-items: stretch;
 }
 
@@ -481,6 +473,7 @@ body,
 
 .stack-item-align-x-center {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -491,6 +484,7 @@ body,
 
 .stack-item-align-x-fill {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
