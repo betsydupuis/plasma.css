@@ -1,7 +1,0 @@
-@mixin circle {
-    border-radius: 100%;
-}
-
-.circle {
-    @include circle;
-}
