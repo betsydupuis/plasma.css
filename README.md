@@ -1,10 +1,22 @@
 
 # Plasma.css
-Flexible layouts framework for css.
+#####Flexible layouts framework for css.
+
+- Mobile-First 12 Column Grid
+- Based on Flexbox
+- Bootstrap 3 Compatible
 
 ## Features
-- Grid Layout using flexbox
+####Grid Layout using flexbox
 
+| Feature       | Supported     | Status |
+| ------------- |:-------------:| -----:|
+| 12 column grid | yes | Alpha |
+| Offsets and Insets | yes | planned |
+| X-axis alignment | yes | Alpha |
+| Y-axis alignment | yes | Alpha |
+
+####Bootstrap 3 Compatible (optional)
 
 ## Browser Support
 
@@ -35,10 +47,15 @@ $ http-server -p 1234
 ``` -->
 
 
-### Dependencies and integrations
+## Dependencies and integrations
+[normalize.css](https://github.com/necolas/normalize.css/)
 
-### Acknowledgements
-- Built on [normalize.css](https://github.com/necolas/normalize.css/)
+[Twitter Bootstrap 3 Sass Version](https://github.com/twbs/bootstrap-sass) (optional)
+
+## Acknowledgements
 
 - Gulp tasks borrows and draws inspiration from [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate)
 
+### Flexbox References
+
+[Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) by Philip Walton
