@@ -1,7 +1,8 @@
 $proportions-total: 12;
+
 @for $i from 1 through $proportions-total {
     .fixed-h-xs-#{$i} {
-        min-height: make-proportions($i, $proportions-total, $base-unit * 5);
+        min-height: make-proportions($i, $base-unit * 5);
     }
 }
 
@@ -9,10 +10,10 @@ $proportions-total: 12;
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm) {
     @for $i from 1 through $proportions-total {
         .fixed-h-sm-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 10);
+            min-height: make-proportions($i, $base-unit * 10);
         }
     }
 }
@@ -20,10 +21,10 @@ $proportions-total: 12;
 // Medium grid
 //
 // Columns, offsets, pushes, and pulls for the desktop device range.
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-md) {
     @for $i from 1 through $proportions-total {
         .fixed-h-md-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 15);
+            min-height: make-proportions($i, $base-unit * 15);
         }
     }
 }
@@ -31,10 +32,10 @@ $proportions-total: 12;
 // Large grid
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
-@media (min-width: $screen-lg-min) {
+@media (min-width: $screen-lg) {
     @for $i from 1 through $proportions-total {
         .fixed-h-lg-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 20);
+            min-height: make-proportions($i, $base-unit * 20);
         }
     }
 }
@@ -42,10 +43,10 @@ $proportions-total: 12;
 // Large grid
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
-@media (min-width: $screen-xl-min) {
+@media (min-width: $screen-xl) {
     @for $i from 1 through $proportions-total {
         .fixed-h-xl-#{$i} {
-            min-height: make-proportions($i, $proportions-total, $base-unit * 25);
+            min-height: make-proportions($i, $base-unit * 25);
         }
     }
 }

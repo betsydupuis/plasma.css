@@ -1,17 +1,25 @@
-$proportions-total: 12;
-@for $i from 1 through $proportions-total {
-    .fixed-xs-#{$i} {
-        width: make-proportions($i, $proportions-total, $base-unit * 5);
-    } // .fixed-xl-#{$i} {
-    //     width: make-proportions($i, $proportions-total, $base-unit * 25);
-    // }
-    // .fixed-lg-#{$i} {
-    //     width: make-proportions($i, $proportions-total, $base-unit * 20);
-    // }
-    // .fixed-md-#{$i} {
-    //     width: make-proportions($i, $proportions-total, $base-unit * 15);
-    // }
-    // .fixed-sm-#{$i} {
-    //     width: make-proportions($i, $proportions-total, $base-unit * 10);
-    // }
+@mixin make-grid-fixed-columns($screen-size, $column-count, $scale) {
+    @for $i from 1 through $column-count {
+        .fixed-#{$screen-size}-#{$i} {
+            width: $i * $scale;
+        }
+    }
 }
+
+// $screen-sizes-fallbacks: lg md sm;
+
+// @each $screen-size in $screen-sizes-fallbacks {
+//     .fixed-xs-12 {
+//         width: $grid-scale-xs * 12;
+//     }
+
+//     @for $i from 1 through $grid-columns {
+//         .fixed-#{$screen-size}-#{$i} {
+//             @extend .fixed-xs-12;
+//         }
+//     }
+// }
+
+$grid-scale-xs: 34 / 6 * 1px;
+
+@include make-grid-fixed-columns("xs", $grid-columns, 26px);

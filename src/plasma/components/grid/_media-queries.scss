@@ -1,0 +1,59 @@
+// XS Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+// @media (max-width: $screen-sm-min - 1px) {}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+@media (min-width: $screen-sm) {
+    @mixin make-grid-sm {
+        .col {
+            @include col-gutter(12px);
+        }
+
+        @include make-row($grid-gutter-width);
+
+        @include make-grid-columns("sm", $grid-columns);
+
+        @include container-responsive-sm;
+    }
+
+    @if $bootstrap3 == false {
+        @include make-grid-sm;
+    }
+
+    @if $include-fixed-grid == true {
+        @include make-grid-fixed-columns("sm", $grid-columns, $base-unit * 10);
+    }
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@media (min-width: $screen-md) {
+    .col {
+        @include col-gutter(18px);
+    }
+
+    @if $bootstrap3 == false {
+        @include make-grid-columns("md", $grid-columns);
+    }
+
+    @include make-grid-fixed-columns("md", $grid-columns, $base-unit * 15);
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@media (min-width: $screen-lg) {
+    .col {
+        @include col-gutter($grid-gutter-width);
+    }
+
+    @include make-grid-columns("lg", $grid-columns);
+
+    @include make-grid-fixed-columns("lg", $grid-columns, $base-unit * 20);
+}

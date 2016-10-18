@@ -4,23 +4,37 @@
 //
 //===========================
 //  Grid Columns
-.col-flex {
-    @include col-flex;
+
+@mixin make-grid-columns($screen-size, $column-count) {
+    @for $i from 1 through $column-count {
+        .#{$screen-size}-#{$i} {
+            @include make-column($i, $column-count);
+        }
+
+        .offset-#{$screen-size}-#{$i} {
+            margin-left: make-offset($i, $column-count);
+        }
+
+        .inset-#{$screen-size}-#{$i} {
+            margin-left: make-offset($i, $column-count);
+        }
+    }
 }
 
+@if $bootstrap3 == false {
+    @include make-grid-columns("xs", $grid-columns);
+}
+
+// Basic column
 .col {
     // @include col-flex;
-    @include col-gutter;
+    // @include col-gutter;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-@for $i from 1 through $grid-columns {
-    .xs-#{$i} {
-        @include make-column($i, $grid-columns);
-    }
-
-    .offset-left-xs-#{$i} {
-        margin-left: make-offset($i, $grid-columns);
-    }
+.col-flex {
+    @include col-flex;
 }
 
 .col-fill {

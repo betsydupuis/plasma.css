@@ -5,9 +5,24 @@
 }
 
 // Grid Containers
+
 .container-responsive {
     position: relative;
-    padding-left: $viewport-margin;
-    padding-right: $viewport-margin;
     margin: 0 auto;
 }
+
+@mixin container-responsive-xs {
+    .container-responsive {
+        padding-left: $screen-xs-margin;
+        padding-right: $screen-xs-margin;
+    }
+}
+
+@mixin container-responsive-sm {
+    .container-responsive {
+        padding-left: $viewport-margin;
+        padding-right: $viewport-margin;
+    }
+}
+
+@include container-responsive-xs;

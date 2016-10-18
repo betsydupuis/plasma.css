@@ -3,12 +3,14 @@ body {
 }
 
 .card {
+  max-width: 100%;
   border-radius: 6px;
   padding: 12px;
   background: rgba(170, 170, 170, 0.25);
   margin-bottom: 24px;
 }
 .card .card {
+  border-radius: 18px;
   background: rgba(170, 170, 170, 0.5);
 }
 
@@ -30,4 +32,14 @@ button {
 
 em {
   color: #999;
+}
+
+.text-white {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 3px;
+  }
 }

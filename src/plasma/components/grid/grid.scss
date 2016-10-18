@@ -16,9 +16,12 @@
 // Grid fixed
 @import "elements/grid-fixed/_columns.scss";
 @import "elements/grid-fixed/_columns-heights.scss";
-@import "elements/grid-flexbox/_columns-media-queries.scss";
 
-// @import "elements/grid-fixed/_columns-media-queries.scss";
+//
+//
+// Media Queries
+@import "media-queries.scss";
+
 //
 //
 // Helpers

@@ -1,5 +1,17 @@
 // _scrolling.scss
 //
+.scroll-y {
+    overflow-y: scroll;
+}
+
+.scroll-x {
+    overflow-x: scroll;
+}
+
+.scroll-both {
+    overflow: scroll;
+}
+
 .container-scroll-area {
     @include col-flex;
 
@@ -22,4 +34,8 @@
 
 .scroll-area-footer {
     flex: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }

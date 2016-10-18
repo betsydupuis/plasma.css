@@ -1,5 +1,6 @@
 $base-unit: 6px;
 
-@function make-proportions($proportion-count, $proportions-total, $base-unit) {
+// To Do: rename make-ratio;
+@function make-proportions($proportion-count, $base-unit) {
     @return $proportion-count * $base-unit;
 }
