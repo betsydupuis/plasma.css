@@ -1,4 +1,17 @@
+// Is it using bootstrap 3?
+$bootstrap3: false;
+$include-fixed-grid: true;
+
+// Grid Variables
+$viewport-min-width: 1200px;
 $grid-columns: 12;
 $grid-gutter-md-width: 24px;
 $grid-gutter-width: 24px;
 $viewport-margin: 12px;
+
+@if $bootstrap3 == true {
+    $grid-columns: 12;
+    $grid-gutter-md-width: 24px;
+    $grid-gutter-width: 24px;
+    $viewport-margin: 12px;
+}

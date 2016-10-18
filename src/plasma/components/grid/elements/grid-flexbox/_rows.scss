@@ -1,4 +1,25 @@
 // Rows
+@mixin row-flex {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 1px;
+    position: relative;
+}
+
+@mixin row-stacked {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+@mixin row-offset($gutter-width) {
+    margin-left: $gutter-width / 2 * -1;
+    margin-right: $gutter-width / 2 * -1;
+}
 
 .row-gutter {
     margin-bottom: $grid-gutter-width;
@@ -8,19 +29,25 @@
     margin-top: $grid-gutter-width;
 }
 
-// Grid Row
 .row,
 .row-flex {
     @include row-flex;
+}
 
-    @include row-offset;
+// Grid Row
+@mixin make-row($gutter-width) {
+    .row {
+        @include row-offset($gutter-width);
 
-    > footer {
-        margin: 0;
-        padding: 0;
+        > footer {
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 
 .row-stacked {
     @include row-stacked;
 }
+
+@include make-row($screen-xs-gutters);
