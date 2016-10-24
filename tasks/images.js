@@ -1,26 +1,24 @@
 var path = require('path');
-var paths = require('../options/paths.config.js');
-
 module.exports = function(gulp, plugins, paths) {
     'use strict';
 
-    // Initialize build with targets
-    var targets = paths.html;
-    buildTasks(targets);
+    if (paths.images) {
+        buildTasks(paths.images);
+    }
 
     function buildTasks(targets) {
-        var htmlTasks = [];
-        var htmlCleanTasks = [];
+        var imagesTasks = [];
+        var imagesCleanTasks = [];
         var dist, src;
 
         for (var i = 0; i < targets.length; i++) {
-            // Create task name and push to htmlTasks
-            var taskName = 'build:html:' + targets[i].name;
-            var cleanTaskName = 'clean:html:' + targets[i].name;
+            // Create task name and push to imagesTasks
+            var taskName = 'build:images:' + targets[i].name;
+            var cleanTaskName = 'clean:images:' + targets[i].name;
 
             // Push task names to array
-            htmlTasks.push(taskName);
-            htmlCleanTasks.push(cleanTaskName);
+            imagesTasks.push(taskName);
+            imagesCleanTasks.push(cleanTaskName);
 
             //Initialize Scripts
             var src = targets[i].src;
@@ -42,19 +40,19 @@ module.exports = function(gulp, plugins, paths) {
             };
         };
 
-        gulp.task('clean:html', htmlCleanTasks);
-        gulp.task('build:html', function() {
-            plugins.runSequence('clean:html', htmlTasks);
-
+        gulp.task('clean:images', imagesCleanTasks);
+        gulp.task('build:images', function() {
+            plugins.runSequence('clean:images', imagesTasks);
         });
 
     };
 
     function cleanScript(destination) {
         plugins.del([
-            '.dist/**/*.html',
+            './reports/*.*(png|jpeg|jpg|gif|svg)',
         ]);
     };
+
 
     function buildScript(source, destination) {
         return gulp.src(source)
@@ -64,5 +62,4 @@ module.exports = function(gulp, plugins, paths) {
                 return destination;
             }));
     };
-
-};
+}
