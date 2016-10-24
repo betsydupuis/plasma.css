@@ -1,8 +1,9 @@
 module.exports = function(gulp, plugins, paths) {
     'use strict';
 
-    var targets = paths.fonts;
-    buildTasks(targets);
+    if (paths.fonts) {
+        buildTasks(paths.fonts);
+    }
 
     function buildTasks(targets) {
         var fontsTasks = [];

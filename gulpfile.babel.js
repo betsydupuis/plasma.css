@@ -4,21 +4,22 @@
 var gulp = require('gulp');
 var glob = require('glob');
 var path = require('path');
-var config = require('./gulp/options/config.js');
-var paths = require('./gulp/options/paths.config.js');
-var tasksPath = './gulp/tasks/';
+var config = require('./tasks/options/env.config.js');
+var paths = require('./tasks/options/paths.config.js');
+var tasksPath = './tasks/**/*.js';
 
 // Plugins
 var plugins = require('gulp-load-plugins')();
 plugins.runSequence = require('run-sequence');
 plugins.del = require('del');
-plugins.bundleLogger = require('./gulp/util/bundleLogger');
-plugins.handleErrors = require('./gulp/util/handleErrors');
+plugins.bundleLogger = require('./tasks/util/bundleLogger.js');
+plugins.handleErrors = require('./tasks/util/handleErrors.js');
 
 
 // Variables
-var taskList = glob.sync(tasksPath + '**/*.js', {
+var taskList = glob.sync(tasksPath, {
     'ignore': [
+        // './**/(options|util)/*',
         './**/options/*',
         './**/util/*'
     ]

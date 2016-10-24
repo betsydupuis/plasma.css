@@ -3,7 +3,7 @@ module.exports = function(gulp, plugins, paths) {
 
     // Dependencies
     var path = require('path');
-    var config = require('../options/config.js');
+    var config = require('./options/env.config.js');
     // plugins.gulpIf = require('gulp-if');
 
     // Post Processors
@@ -22,7 +22,7 @@ module.exports = function(gulp, plugins, paths) {
     ];
 
     // Paths
-    var paths = require('../options/paths.config.js');
+    var paths = require('./options/paths.config.js');
     var targets = paths.scss;
 
     // Initialize Build Tasks with SCSS Targets
