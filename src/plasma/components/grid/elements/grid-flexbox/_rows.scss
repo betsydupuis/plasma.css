@@ -16,38 +16,6 @@
     align-content: stretch;
 }
 
-@mixin row-offset($gutter-width) {
-    margin-left: $gutter-width / 2 * -1;
-    margin-right: $gutter-width / 2 * -1;
+@mixin row-gutter-offset($gutter-width) {
+    @include make-margin-x($gutter-width / 2 * -1);
 }
-
-.row-gutter {
-    margin-bottom: $grid-gutter-width;
-}
-
-.row-gutter-top {
-    margin-top: $grid-gutter-width;
-}
-
-.row,
-.row-flex {
-    @include row-flex;
-}
-
-// Grid Row
-@mixin make-row($gutter-width) {
-    .row {
-        @include row-offset($gutter-width);
-
-        > footer {
-            margin: 0;
-            padding: 0;
-        }
-    }
-}
-
-.row-stacked {
-    @include row-stacked;
-}
-
-@include make-row($screen-xs-gutters);

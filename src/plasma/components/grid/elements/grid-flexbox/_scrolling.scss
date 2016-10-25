@@ -1,41 +1,28 @@
 // _scrolling.scss
 //
-.scroll-y {
-    overflow-y: scroll;
-}
 
-.scroll-x {
-    overflow-x: scroll;
-}
+@mixin grid-flexbox-scroll {
+    .container-scroll-area {
+        @include make-col-flex;
 
-.scroll-both {
-    overflow: scroll;
-}
+        @include row-stacked;
 
-.container-scroll-area {
-    @include col-flex;
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
 
-    @include row-stacked;
+    .scroll-area-header,
+    .scroll-area-fixed {
+        // Turn column into fixed header
+        flex: none;
+    }
 
-    overflow: hidden;
-    flex-wrap: nowrap;
-}
+    .scroll-area {
+        overflow-y: auto !important;
+        flex: 1 1 0px;
+    }
 
-.scroll-area-header,
-.scroll-area-fixed {
-    // Turn column into fixed header
-    flex: none;
-}
-
-.scroll-area {
-    overflow-y: auto !important;
-    flex: 1 1 0px;
-}
-
-.scroll-area-footer {
-    flex: none;
-}
-
-.overflow-hidden {
-    overflow: hidden;
+    .scroll-area-footer {
+        flex: none;
+    }
 }

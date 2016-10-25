@@ -1,4 +1,4 @@
-container-center {
+.container-center {
     align-items: stretch;
     display: flex;
     flex-direction: row;
@@ -6,7 +6,7 @@ container-center {
     justify-content: center;
 }
 
-item-center {
+.item-center {
     margin: auto;
 }
 
@@ -14,17 +14,17 @@ item-center {
     margin: auto;
 }
 
-item-center-y {
+.item-center-y {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-item-center-x {
+.item-center-x {
     margin-left: auto;
     margin-right: auto;
 }
 
-container-center-content {
+.container-center-content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
