@@ -1,28 +1,103 @@
-@import "variables";
-@import "base";
-@import "mixins";
+@import "config";
+@import "dependencies";
 
-// Elements
-// Grid Flexbox
-@import "elements/gutters";
-@import "elements/grid-flexbox/_containers.scss";
-@import "elements/grid-flexbox/_columns.scss";
-@import "elements/grid-flexbox/_rows.scss";
-@import "elements/grid-flexbox/_align.scss";
-@import "elements/grid-flexbox/_scrolling.scss";
+// Grid Declarations
+// ------------------------
+// Extra Small Grid / Mobile First Default Grid
+@if $viewport-is-full-height {
+    @include viewport-full-height;
+}
 
-//
-//
-// Grid fixed
-@import "elements/grid-fixed/_columns.scss";
-@import "elements/grid-fixed/_columns-heights.scss";
+@include containers-fluid;
 
-//
-//
-// Media Queries
-@import "media-queries.scss";
+@include containers-flexbox;
 
-//
-//
+.row-flex {
+    @include row-flex;
+}
+
+.row-stacked {
+    @include row-stacked;
+}
+
+@include columns-flexbox;
+
+@if $bootstrap3 == false {
+    .row {
+        @extend .row-flex;
+    }
+
+    @include container-responsive($screen-xs-margin);
+
+    @include grid-gutter($screen-xs-gutters);
+
+    @include columns-fluid("xs", $grid-columns);
+
+    @if $include-fixed-grid == true {
+        @include column-height-fixed-defaults;
+
+        @include column-height-fixed("xs", $grid-columns, $screen-xs);
+
+        @include columns-fixed("xs", 12, $screen-xs);
+    }
+}
+
+// Small grid
+
+@media (min-width: $screen-sm) {
+    @if $bootstrap3 == false {
+        @include grid-gutter(12px);
+
+        @include columns-fluid("sm", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("sm", $grid-columns, $screen-sm);
+
+            @include column-height-fixed("sm", $grid-columns, $screen-sm);
+        }
+    }
+}
+
+// Medium grid
+@media (min-width: $screen-md) {
+    @if $bootstrap3 == false {
+        @include grid-gutter(18px);
+
+        @include columns-fluid("md", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("md", $grid-columns, $screen-md);
+
+            @include column-height-fixed("md", $grid-columns, $screen-md);
+        }
+    }
+}
+
+// Large grid
+
+@media (min-width: $screen-lg) {
+    @if $bootstrap3 == false {
+        @include grid-gutter($grid-gutter-width);
+
+        @include columns-fluid("lg", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("lg", $grid-columns, $screen-lg);
+
+            @include column-height-fixed("lg", $grid-columns, $screen-lg);
+        }
+    }
+}
+
+@include grid-flexbox-align;
+
 // Helpers
-@import "helpers";
+@include row-helpers;
+
+@include grid-flexbox-scroll;

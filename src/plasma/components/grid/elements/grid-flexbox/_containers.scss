@@ -1,28 +1,7 @@
 //Containers
 
-.container-nested {
-    @include col-flex;
-}
-
-// Grid Containers
-
-.container-responsive {
-    position: relative;
-    margin: 0 auto;
-}
-
-@mixin container-responsive-xs {
-    .container-responsive {
-        padding-left: $screen-xs-margin;
-        padding-right: $screen-xs-margin;
+@mixin containers-flexbox {
+    .container-nested {
+        @include make-col-flex;
     }
 }
-
-@mixin container-responsive-sm {
-    .container-responsive {
-        padding-left: $viewport-margin;
-        padding-right: $viewport-margin;
-    }
-}
-
-@include container-responsive-xs;

@@ -1,0 +1,6 @@
+@mixin viewport-full-height {
+    html,
+    body {
+        height: 100%;
+    }
+}

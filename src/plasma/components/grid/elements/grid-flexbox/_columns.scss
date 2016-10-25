@@ -1,46 +1,28 @@
-//===========================
-// Grid Responsive Classes
-//------------------------------------------------
-//
-//===========================
-//  Grid Columns
+@mixin make-col-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
 
-@mixin make-grid-columns($screen-size, $column-count) {
-    @for $i from 1 through $column-count {
-        .#{$screen-size}-#{$i} {
-            @include make-column($i, $column-count);
-        }
+@mixin col-fill {
+    // V1 Doesn't wrap text
+    // -webkit-flex: 1 1 auto;
+    // -ms-flex: 1 1 auto;
+    // flex: 1 1 auto;
 
-        .offset-#{$screen-size}-#{$i} {
-            margin-left: make-offset($i, $column-count);
-        }
+    // V2 Does wrap text
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+}
 
-        .inset-#{$screen-size}-#{$i} {
-            margin-left: make-offset($i, $column-count);
-        }
+@mixin columns-flexbox {
+    .col-flex {
+        @include make-col-flex;
     }
-}
 
-@if $bootstrap3 == false {
-    @include make-grid-columns("xs", $grid-columns);
-}
-
-// Basic column
-.col {
-    // @include col-flex;
-    // @include col-gutter;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-.col-flex {
-    @include col-flex;
-}
-
-.col-fill {
-    @include col-fill;
-}
-
-.col-stack {
-    width: 100%;
+    .col-fill {
+        @include col-fill;
+    }
 }

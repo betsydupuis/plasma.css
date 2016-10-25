@@ -1,0 +1,33 @@
+//  Grid Columns
+
+@mixin make-column-fluid($ratio) {
+    width: ratio-to-percent($ratio);
+}
+
+@mixin make-offset-fluid($ratio) {
+    margin-left: ratio-to-percent($ratio);
+}
+
+@mixin make-inset-fluid($ratio) {
+    margin-right: ratio-to-percent($ratio);
+}
+
+@mixin columns-fluid($screen-size, $column-count) {
+    @for $i from 1 through $column-count {
+        .#{$screen-size}-#{$i} {
+            @include make-column-fluid($i / $column-count);
+        }
+
+        .#{$screen-size}-h-#{$i} {
+            @include make-column-height-fluid($i / $column-count);
+        }
+
+        .offset-#{$screen-size}-#{$i} {
+            @include make-offset-fluid($i / $column-count);
+        }
+
+        .inset-#{$screen-size}-#{$i} {
+            @include make-inset-fluid($i / $column-count);
+        }
+    }
+}

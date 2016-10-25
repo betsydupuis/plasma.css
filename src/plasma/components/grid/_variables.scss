@@ -1,7 +1,3 @@
-// Is it using bootstrap 3?
-$bootstrap3: false;
-$include-fixed-grid: true;
-
 // Grid Variables
 $viewport-min-width: 1200px;
 $grid-columns: 12;
@@ -15,3 +11,42 @@ $viewport-margin: 12px;
     $grid-gutter-width: 24px;
     $viewport-margin: 12px;
 }
+
+// Grid
+$xs-initials: "xs";
+$grid-screen-xs: $screen-xs;
+$grid-margin-optical-xs: 8px;
+$grid-margin-xs: 4px;
+$grid-width-xs: $grid-screen-xs - $grid-margin-optical-xs * 2;
+$grid-gutters-xs: 8px;
+
+$xs-transitional-initials: "xs-transitional";
+$grid-screen-xs-transitional: $screen-xs-transitional;
+$grid-margin-optical-xs-transitional: 8px;
+$grid-margin-xs-transitional: 4px;
+$grid-width-xs-transitional: $grid-screen-xs-transitional - $grid-margin-optical-xs-transitional * 2;
+$grid-gutters-xs-transitional: 8px;
+
+// Grid
+$sm-initials: "sm";
+$grid-screen-sm: $screen-sm;
+$grid-margin-optical-sm: $screen-sm;
+$grid-margin-sm: $screen-sm;
+$grid-width-sm: $grid-screen-sm - $grid-margin-optical-sm * 2;
+$grid-gutters-sm: 0;
+
+// Grid
+$md-initials: "md";
+$grid-screen-md: $screen-md;
+$grid-margin-optical-md: 0;
+$grid-margin-md: 0;
+$grid-width-md: $grid-screen-md - $grid-margin-optical-md * 2;
+$grid-gutters-md: 0;
+
+// Grid
+$lg-initials: "lg";
+$grid-screen-lg: $screen-lg;
+$grid-margin-optical-lg: 0;
+$grid-margin-lg: 0;
+$grid-width-lg: $grid-screen-lg - $grid-margin-optical-lg * 2;
+$grid-gutters-lg: 0;
