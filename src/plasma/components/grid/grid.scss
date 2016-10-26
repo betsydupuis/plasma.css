@@ -4,11 +4,87 @@
 // Grid Declarations
 // ------------------------
 // Extra Small Grid / Mobile First Default Grid
+
+@if $bootstrap3 == false {
+    @include containers-fluid;
+
+    .row {
+        @extend .row-flex;
+    }
+
+    @include container-responsive($screen-xs-margin);
+
+    @include grid-gutter($screen-xs-gutters);
+
+    @include columns-fluid("xs", $grid-columns);
+
+    @if $include-fixed-grid == true {
+        @include columns-fixed("xs", 12, $grid-width-xs);
+
+        @include column-height-fixed-defaults;
+
+        @include column-height-fixed("xs", $grid-columns, $grid-width-xs);
+    }
+}
+
+@if $bootstrap3 == false {
+    // Extra Small Transitional Gutters
+    @media (min-width: $grid-screen-xs-transitional) {
+        @include grid-gutter($grid-gutters-xs-transitional);
+
+        @include container-responsive($screen-sm-margin);
+    }
+
+    // Small grid
+    @media (min-width: $screen-sm) {
+        @include grid-gutter($screen-sm-gutters);
+
+        @include columns-fluid("sm", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("sm", $grid-columns, $grid-width-sm);
+
+            @include column-height-fixed("sm", $grid-columns, $grid-width-sm);
+        }
+    }
+
+    // Medium grid
+    @media (min-width: $screen-md) {
+        @include grid-gutter(18px);
+
+        @include columns-fluid("md", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("md", $grid-columns, $grid-width-md);
+
+            @include column-height-fixed("md", $grid-columns, $grid-width-md);
+        }
+    }
+
+    // Large grid
+
+    @media (min-width: $screen-lg) {
+        @include grid-gutter($grid-gutter-width);
+
+        @include columns-fluid("lg", $grid-columns);
+
+        @include container-responsive($screen-sm-margin);
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed("lg", $grid-columns, $grid-width-lg);
+
+            @include column-height-fixed("lg", $grid-columns, $screen-lg);
+        }
+    }
+}
+
 @if $viewport-is-full-height {
     @include viewport-full-height;
 }
-
-@include containers-fluid;
 
 @include containers-flexbox;
 
@@ -21,79 +97,6 @@
 }
 
 @include columns-flexbox;
-
-@if $bootstrap3 == false {
-    .row {
-        @extend .row-flex;
-    }
-
-    @include container-responsive($screen-xs-margin);
-
-    @include grid-gutter($screen-xs-gutters);
-
-    @include columns-fluid("xs", $grid-columns);
-
-    @if $include-fixed-grid == true {
-        @include column-height-fixed-defaults;
-
-        @include column-height-fixed("xs", $grid-columns, $screen-xs);
-
-        @include columns-fixed("xs", 12, $screen-xs);
-    }
-}
-
-// Small grid
-
-@media (min-width: $screen-sm) {
-    @if $bootstrap3 == false {
-        @include grid-gutter(12px);
-
-        @include columns-fluid("sm", $grid-columns);
-
-        @include container-responsive($screen-sm-margin);
-
-        @if $include-fixed-grid == true {
-            @include columns-fixed("sm", $grid-columns, $screen-sm);
-
-            @include column-height-fixed("sm", $grid-columns, $screen-sm);
-        }
-    }
-}
-
-// Medium grid
-@media (min-width: $screen-md) {
-    @if $bootstrap3 == false {
-        @include grid-gutter(18px);
-
-        @include columns-fluid("md", $grid-columns);
-
-        @include container-responsive($screen-sm-margin);
-
-        @if $include-fixed-grid == true {
-            @include columns-fixed("md", $grid-columns, $screen-md);
-
-            @include column-height-fixed("md", $grid-columns, $screen-md);
-        }
-    }
-}
-
-// Large grid
-
-@media (min-width: $screen-lg) {
-    @if $bootstrap3 == false {
-        @include grid-gutter($grid-gutter-width);
-
-        @include columns-fluid("lg", $grid-columns);
-
-        @include container-responsive($screen-sm-margin);
-
-        @if $include-fixed-grid == true {
-            @include columns-fixed("lg", $grid-columns, $screen-lg);
-
-            @include column-height-fixed("lg", $grid-columns, $screen-lg);
-        }
-    }
-}
 
 @include grid-flexbox-align;
 

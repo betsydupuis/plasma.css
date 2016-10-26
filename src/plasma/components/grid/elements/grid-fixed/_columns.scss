@@ -1,12 +1,9 @@
-@mixin make-column-fixed($ratio, $max-width) {
-    width: solve-proportion-for-numerator($ratio, $max-width);
-}
-
 @mixin columns-fixed($screen-size, $column-count, $max-width) {
+
     @for $i from 1 through $column-count {
         .fixed-#{$screen-size}-#{$i} {
-            // width: $i * $scale;
-            @include make-column-fixed($i / $column-count, $max-width);
+            // width: solve-proportion-for-numerator($i / $column-count, $max-width);
+            width: solve-proportion-for-numerator($i / $column-count, $max-width);
         }
     }
 }

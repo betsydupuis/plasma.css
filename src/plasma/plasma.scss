@@ -1,27 +1,8 @@
-//===========================
-// Variables and mixins
-//===========================
-@import "base/units/**/*";
-@import "base/variables";
-
-//===========================
 // Base
-//===========================
 @import "base/base";
 
-//===========================
-// Elements
-//===========================
-// @import "elements/**/*";
-//===========================
 // Components
-//===========================
 @import "components/components";
 
-//===========================
 // Helpers
-// -----------
-// Imported at the end for override purposes.
-//===========================
-//
 @import "base/behaviors/helpers.scss";
