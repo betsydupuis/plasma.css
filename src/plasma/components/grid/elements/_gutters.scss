@@ -5,16 +5,7 @@
 @mixin row($gutter-width) {
     .row {
         @include make-margin-x($gutter-width / 2 * -1);
-
     }
-}
-
-.row-gutter {
-    margin-bottom: $grid-gutter-width;
-}
-
-.row-gutter-top {
-    margin-top: $grid-gutter-width;
 }
 
 @mixin col-gutter($grid-gutter-width) {
@@ -27,6 +18,14 @@
     @include col-gutter($dimension);
 
     @include row($dimension);
+
+    .row-gutter {
+        margin-bottom: $dimension;
+    }
+
+    .row-gutter-top {
+        margin-top: $dimension;
+    }
 }
 
 @mixin row-helpers {
