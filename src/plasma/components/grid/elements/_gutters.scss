@@ -8,14 +8,6 @@
     }
 }
 
-.row-gutter {
-    margin-bottom: $grid-gutter-width;
-}
-
-.row-gutter-top {
-    margin-top: $grid-gutter-width;
-}
-
 @mixin col-gutter($grid-gutter-width) {
     .col {
         @include make-padding-x($grid-gutter-width / 2);
@@ -26,6 +18,14 @@
     @include col-gutter($dimension);
 
     @include row($dimension);
+
+    .row-gutter {
+        margin-bottom: $dimension;
+    }
+
+    .row-gutter-top {
+        margin-top: $dimension;
+    }
 }
 
 @mixin row-helpers {

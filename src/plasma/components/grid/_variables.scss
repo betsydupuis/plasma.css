@@ -11,26 +11,29 @@ $viewport-margin: 12px;
     $grid-gutter-width: 24px;
     $viewport-margin: 12px;
 }
-
+@function computed-grid-width($grid-screen, $grid-margin-optical, $grid-gutters){
+    // @return $grid-screen + $grid-gutters - ($grid-margin-optical * 2) ;
+    @return $grid-screen + $grid-gutters - ($grid-margin-optical * 2) ;
+}
 // Grid
 $xs-initials: "xs";
 $grid-screen-xs: $screen-xs;
 $grid-margin-optical-xs: 8px;
 $grid-margin-xs: 4px;
-$grid-width-xs: $grid-screen-xs - $grid-margin-optical-xs * 2;
 $grid-gutters-xs: 8px;
+$grid-width-xs: computed-grid-width($grid-screen-xs, $grid-margin-optical-xs, $grid-gutters-xs);
 
 $xs-transitional-initials: "xs-transitional";
 $grid-screen-xs-transitional: $screen-xs-transitional;
 $grid-margin-optical-xs-transitional: 8px;
 $grid-margin-xs-transitional: 4px;
-$grid-width-xs-transitional: $grid-screen-xs-transitional - $grid-margin-optical-xs-transitional * 2;
-$grid-gutters-xs-transitional: 8px;
+$grid-width-xs-transitional: ($grid-screen-xs-transitional - ($grid-margin-optical-xs-transitional * 2));
+$grid-gutters-xs-transitional: 12px;
 
 // Grid
 $sm-initials: "sm";
 $grid-screen-sm: $screen-sm;
-$grid-margin-optical-sm: $screen-sm;
+$grid-margin-optical-sm: 12px;
 $grid-margin-sm: $screen-sm;
 $grid-width-sm: $grid-screen-sm - $grid-margin-optical-sm * 2;
 $grid-gutters-sm: 0;
@@ -38,7 +41,7 @@ $grid-gutters-sm: 0;
 // Grid
 $md-initials: "md";
 $grid-screen-md: $screen-md;
-$grid-margin-optical-md: 0;
+$grid-margin-optical-md: 20px;
 $grid-margin-md: 0;
 $grid-width-md: $grid-screen-md - $grid-margin-optical-md * 2;
 $grid-gutters-md: 0;

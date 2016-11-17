@@ -31,6 +31,10 @@ module.exports = {
             name: 'index',
             src: './src/index.html',
             dist: './dist'
+        }, {
+            name: 'docs',
+            src: './src/docs/**/*.html',
+            dist: './dist/docs'
         }
     ],
     // fonts: [],
