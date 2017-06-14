@@ -1,14 +1,14 @@
 //===========================
 // Fill Containers
 //---------------------------
-//
+// A fill will stretch to fill the space, but will not be compressed.
 //===========================
 // Area to be filled by child
 @mixin container-fill {
     align-items: stretch;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
     justify-content: center;
 }
 

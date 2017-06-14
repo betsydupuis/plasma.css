@@ -1,76 +1,45 @@
-/*
-Error: Invalid CSS after "...nsitional-thru-": expected ":", was "$screen-md-brea..."
-        on line 46 of /Users/itsjustluck/code/flexbox-grid/src/plasma/base/units/_screens.scss
-        from line 1 of /Users/itsjustluck/code/flexbox-grid/src/docs/docs.scss
+body {
+  color: #333;
+}
 
-41: $screen-md: 1024px !default;
-42: $screen-min-min-margin: 8px;
-43: $screen-md-margin: 12px;
-44: $screen-sm-gutters: 24px;
-45: 
-46: $screen-xs-transitional-thru-$screen-md-breakpoint: ($screen-xs-transitional - $screen-md-breakpoint)/2;
-47: 
-48: // Large Screen / Desktop
-49: $screen-lg: 1440px;
-50: $screen-lg-max: 1440px;
-51: $screen-lg-margin: 12px;
+.card {
+  max-width: 100%;
+  border-radius: 6px;
+  padding: 12px;
+  background: rgba(170, 170, 170, 0.25);
+  margin-bottom: 24px;
+}
+.card .card {
+  border-radius: 18px;
+  background: rgba(170, 170, 170, 0.5);
+}
 
-Backtrace:
-/Users/itsjustluck/code/flexbox-grid/src/plasma/base/units/_screens.scss:46
-/Users/itsjustluck/code/flexbox-grid/src/docs/docs.scss:1
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:619:in `variable'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/bin/compass:23:in `load'
-/usr/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...nsitional-thru-\": expected \":\", was \"$screen-md-brea...\"\A         on line 46 of /Users/itsjustluck/code/flexbox-grid/src/plasma/base/units/_screens.scss\A         from line 1 of /Users/itsjustluck/code/flexbox-grid/src/docs/docs.scss\A \A 41: $screen-md: 1024px !default;\A 42: $screen-min-min-margin: 8px;\A 43: $screen-md-margin: 12px;\A 44: $screen-sm-gutters: 24px;\A 45: \A 46: $screen-xs-transitional-thru-$screen-md-breakpoint: ($screen-xs-transitional - $screen-md-breakpoint)/2;\A 47: \A 48: // Large Screen / Desktop\A 49: $screen-lg: 1440px;\A 50: $screen-lg-max: 1440px;\A 51: $screen-lg-margin: 12px;"; }
+.circle {
+  border-radius: 100%;
+  background: #ccc;
+  display: inline-block;
+}
+
+button {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid;
+}
+
+.text-center {
+  text-align: center;
+}
+
+em {
+  color: #999;
+}
+
+.text-white {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 3px;
+  }
+}

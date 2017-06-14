@@ -23,27 +23,23 @@ $screen-xs-gutters: 8px;
 $screen-xs-transitional: $iPhone-6;
 $screen-xs-transitional-min: $iPhone-6;
 $screen-xs-transitional-max: $iPhone-6-plus;
-$screen-xs-transitional-min-margin: 8px;
-$screen-xs-transitional-max-margin: 14px;
-$screen-xs-transitional-gutters: 12px;
 
 // Small screen / tablet
 $screen-sm: 768px !default;
-$screen-sm-min: 768px !default;
-$screen-sm-margin: 12px;
-$screen-sm-min-margin: 24px;
-$screen-sm-gutters: 24px;
 
 // Medium screen / tablet / small desktop
 $screen-md: 1024px !default;
-$screen-min-min-margin: 8px;
-$screen-md-margin: 12px;
-$screen-sm-gutters: 24px;
 
 // Large Screen / Desktop
-$screen-lg: 1440px;
-$screen-lg-max: 1440px;
-$screen-lg-margin: 12px;
+$screen-lg: 1280px;
+
+
+// Large Screen / Desktop
+$screen-xl: 1440px;
+
 
 // Extra Large Screen / Monitors
-$screen-xl: 1800px;
+$screen-xxl: 1800px; 
+$screen-xxl-gutters: 36px;
+
+

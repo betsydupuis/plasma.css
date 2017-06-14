@@ -22,11 +22,11 @@
             @include make-column-height-fluid($i / $column-count);
         }
 
-        .offset-#{$screen-size}-#{$i} {
+        .#{$screen-size}-offset-#{$i} {
             @include make-offset-fluid($i / $column-count);
         }
 
-        .inset-#{$screen-size}-#{$i} {
+        .#{$screen-size}-inset-#{$i} {
             @include make-inset-fluid($i / $column-count);
         }
     }

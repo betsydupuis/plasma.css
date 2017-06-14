@@ -27,70 +27,116 @@
         @extend .row-flex;
     }
 
-    @include container-responsive($screen-xs-margin);
+    @include container-responsive($grid-xs-margin);
 
-    @include grid-gutter($screen-xs-gutters);
+    @include grid-gutter($grid-xs-gutters);
 
-    @include columns-fluid("xs", $grid-columns);
+    @include columns-fluid($grid-xs-initials, $grid-columns);
 
     @if $include-fixed-grid == true {
         @include column-height-fixed-defaults;
 
-        @include column-height-fixed("xs", $grid-columns, $screen-xs);
+        @include column-height-fixed($grid-xs-initials, $grid-columns, $grid-xs-width);
 
-        @include columns-fixed("xs", 12, $screen-xs);
+        @include columns-fixed($grid-xs-initials, $grid-columns, $grid-xs-width);
     }
 }
 
 // Small grid
 
-@media (min-width: $screen-sm) {
+@media (min-width: $breakpoint-sm) {
     @if $bootstrap3 == false {
-        @include grid-gutter(12px);
+        @include grid-gutter($grid-sm-gutters);
 
-        @include columns-fluid("sm", $grid-columns);
+        @include columns-fluid($grid-sm-initials, $grid-columns);
 
-        @include container-responsive($screen-sm-margin);
+        @include container-responsive($grid-sm-margin);
+        
+        .sm-row-stacked {
+            @include row-stacked;
+        }
+        .sm-row-unstacked {
+            @include row-unstacked;
+        }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed("sm", $grid-columns, $screen-sm);
+            @include columns-fixed($grid-sm-initials, $grid-columns, $grid-sm-width);
 
-            @include column-height-fixed("sm", $grid-columns, $screen-sm);
+            @include column-height-fixed($grid-sm-initials, $grid-columns, $grid-sm-width);
         }
     }
 }
 
 // Medium grid
-@media (min-width: $screen-md) {
+@media (min-width: $breakpoint-md) {
     @if $bootstrap3 == false {
-        @include grid-gutter(18px);
+        @include grid-gutter($grid-md-gutters);
 
-        @include columns-fluid("md", $grid-columns);
+        @include columns-fluid($grid-md-initials, $grid-columns);
 
-        @include container-responsive($screen-sm-margin);
+        @include container-responsive($grid-md-margin);
+        
+        .md-row-stacked {
+            @include row-stacked;
+        }
+        .md-row-unstacked {
+            @include row-unstacked;
+        }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed("md", $grid-columns, $screen-md);
+            @include columns-fixed($grid-md-initials, $grid-columns, $grid-md-width);
 
-            @include column-height-fixed("md", $grid-columns, $screen-md);
+            @include column-height-fixed($grid-md-initials, $grid-columns, $grid-md-width);
         }
     }
 }
 
-// Large grid
+/*-- Large grid --*/
 
-@media (min-width: $screen-lg) {
+@media (min-width: $breakpoint-lg) {
     @if $bootstrap3 == false {
         @include grid-gutter($grid-gutter-width);
 
-        @include columns-fluid("lg", $grid-columns);
+        @include columns-fluid($grid-lg-initials, $grid-columns);
 
-        @include container-responsive($screen-sm-margin);
+        @include container-responsive($grid-sm-margin);
+        
+        .lg-row-stacked {
+            @include row-stacked;
+        }
+        .lg-row-unstacked {
+            @include row-unstacked;
+        }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed("lg", $grid-columns, $screen-lg);
+            @include columns-fixed($grid-lg-initials, $grid-columns, $grid-lg-width);
 
-            @include column-height-fixed("lg", $grid-columns, $screen-lg);
+            @include column-height-fixed($grid-lg-initials, $grid-columns, $grid-lg-width);
+        }
+    }
+}
+
+/*-- Large grid --*/
+
+@media (min-width: $breakpoint-xl) {
+    @if $bootstrap3 == false {
+        @include grid-gutter($grid-gutter-width);
+
+        @include columns-fluid($grid-xl-initials, $grid-columns);
+
+        @include container-responsive($grid-sm-margin);
+        
+        .lg-row-stacked {
+            @include row-stacked;
+        }
+        .lg-row-unstacked {
+            @include row-unstacked;
+        }
+
+        @if $include-fixed-grid == true {
+            @include columns-fixed($grid-xl-initials, $grid-columns, $grid-xl-width);
+
+            @include column-height-fixed($grid-xl-initials, $grid-columns, $grid-xl-width);
         }
     }
 }
