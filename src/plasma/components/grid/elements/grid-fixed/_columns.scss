@@ -4,7 +4,7 @@
 
 @mixin columns-fixed($screen-size, $column-count, $max-width) {
     @for $i from 1 through $column-count {
-        .fixed-#{$screen-size}-#{$i} {
+        .#{$screen-size}-fixed-#{$i} {
             // width: $i * $scale;
             @include make-column-fixed($i / $column-count, $max-width);
         }

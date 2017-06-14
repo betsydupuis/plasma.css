@@ -12,9 +12,12 @@
     // flex: 1 1 auto;
 
     // V2 Does wrap text
-    -webkit-flex: 1 1 0%;
-    -ms-flex: 1 1 0%;
+    // -webkit-flex: 1 1 0%;
+    // -ms-flex: 1 1 0%;
     flex: 1 1 0%;
+}
+@mixin col-auto {
+    flex: none;
 }
 
 @mixin columns-flexbox {

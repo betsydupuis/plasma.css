@@ -11,7 +11,7 @@
 
 @mixin column-height-fixed($screen-size, $column-count, $max-width) {
     @for $i from 1 through $column-count {
-        .fixed-h-#{$screen-size}-#{$i} {
+        .#{$screen-size}-fixed-h-#{$i} {
             @include make-column-height-fixed($i / $column-count, $max-width);
         }
     }
