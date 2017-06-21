@@ -1130,7 +1130,7 @@ body {
   }
 }
 /*-- Large grid --*/
-@media (min-width: 1228px) {
+@media (min-width: 1152px) {
   .col {
     padding-left: 12px;
     padding-right: 12px;
@@ -1357,103 +1357,103 @@ body {
   }
 
   .lg-fixed-1 {
-    width: 95.66667px;
+    width: 94px;
   }
 
   .lg-fixed-2 {
-    width: 191.33333px;
+    width: 188px;
   }
 
   .lg-fixed-3 {
-    width: 287px;
+    width: 282px;
   }
 
   .lg-fixed-4 {
-    width: 382.66667px;
+    width: 376px;
   }
 
   .lg-fixed-5 {
-    width: 478.33333px;
+    width: 470px;
   }
 
   .lg-fixed-6 {
-    width: 574px;
+    width: 564px;
   }
 
   .lg-fixed-7 {
-    width: 669.66667px;
+    width: 658px;
   }
 
   .lg-fixed-8 {
-    width: 765.33333px;
+    width: 752px;
   }
 
   .lg-fixed-9 {
-    width: 861px;
+    width: 846px;
   }
 
   .lg-fixed-10 {
-    width: 956.66667px;
+    width: 940px;
   }
 
   .lg-fixed-11 {
-    width: 1052.33333px;
+    width: 1034px;
   }
 
   .lg-fixed-12 {
-    width: 1148px;
+    width: 1128px;
   }
 
   .lg-fixed-h-1 {
-    min-height: 95.66667px;
+    min-height: 94px;
   }
 
   .lg-fixed-h-2 {
-    min-height: 191.33333px;
+    min-height: 188px;
   }
 
   .lg-fixed-h-3 {
-    min-height: 287px;
+    min-height: 282px;
   }
 
   .lg-fixed-h-4 {
-    min-height: 382.66667px;
+    min-height: 376px;
   }
 
   .lg-fixed-h-5 {
-    min-height: 478.33333px;
+    min-height: 470px;
   }
 
   .lg-fixed-h-6 {
-    min-height: 574px;
+    min-height: 564px;
   }
 
   .lg-fixed-h-7 {
-    min-height: 669.66667px;
+    min-height: 658px;
   }
 
   .lg-fixed-h-8 {
-    min-height: 765.33333px;
+    min-height: 752px;
   }
 
   .lg-fixed-h-9 {
-    min-height: 861px;
+    min-height: 846px;
   }
 
   .lg-fixed-h-10 {
-    min-height: 956.66667px;
+    min-height: 940px;
   }
 
   .lg-fixed-h-11 {
-    min-height: 1052.33333px;
+    min-height: 1034px;
   }
 
   .lg-fixed-h-12 {
-    min-height: 1148px;
+    min-height: 1128px;
   }
 }
 /*-- Large grid --*/
-@media (min-width: 1404px) {
+@media (min-width: 1432px) {
   .col {
     padding-left: 12px;
     padding-right: 12px;
@@ -1680,99 +1680,99 @@ body {
   }
 
   .xl-fixed-1 {
-    width: 113px;
+    width: 118px;
   }
 
   .xl-fixed-2 {
-    width: 226px;
+    width: 236px;
   }
 
   .xl-fixed-3 {
-    width: 339px;
+    width: 354px;
   }
 
   .xl-fixed-4 {
-    width: 452px;
+    width: 472px;
   }
 
   .xl-fixed-5 {
-    width: 565px;
+    width: 590px;
   }
 
   .xl-fixed-6 {
-    width: 678px;
+    width: 708px;
   }
 
   .xl-fixed-7 {
-    width: 791px;
+    width: 826px;
   }
 
   .xl-fixed-8 {
-    width: 904px;
+    width: 944px;
   }
 
   .xl-fixed-9 {
-    width: 1017px;
+    width: 1062px;
   }
 
   .xl-fixed-10 {
-    width: 1130px;
+    width: 1180px;
   }
 
   .xl-fixed-11 {
-    width: 1243px;
+    width: 1298px;
   }
 
   .xl-fixed-12 {
-    width: 1356px;
+    width: 1416px;
   }
 
   .xl-fixed-h-1 {
-    min-height: 113px;
+    min-height: 118px;
   }
 
   .xl-fixed-h-2 {
-    min-height: 226px;
+    min-height: 236px;
   }
 
   .xl-fixed-h-3 {
-    min-height: 339px;
+    min-height: 354px;
   }
 
   .xl-fixed-h-4 {
-    min-height: 452px;
+    min-height: 472px;
   }
 
   .xl-fixed-h-5 {
-    min-height: 565px;
+    min-height: 590px;
   }
 
   .xl-fixed-h-6 {
-    min-height: 678px;
+    min-height: 708px;
   }
 
   .xl-fixed-h-7 {
-    min-height: 791px;
+    min-height: 826px;
   }
 
   .xl-fixed-h-8 {
-    min-height: 904px;
+    min-height: 944px;
   }
 
   .xl-fixed-h-9 {
-    min-height: 1017px;
+    min-height: 1062px;
   }
 
   .xl-fixed-h-10 {
-    min-height: 1130px;
+    min-height: 1180px;
   }
 
   .xl-fixed-h-11 {
-    min-height: 1243px;
+    min-height: 1298px;
   }
 
   .xl-fixed-h-12 {
-    min-height: 1356px;
+    min-height: 1416px;
   }
 }
 .row-align-x-left {
