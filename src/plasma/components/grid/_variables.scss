@@ -47,19 +47,19 @@ $grid-md-width: $grid-md-screen - $grid-md-margin-optical * 2;
 
 // Grid
 $grid-lg-initials: "lg";
-$grid-lg-margin-optical: 40px;
+$grid-lg-margin-optical: 76px;
 $grid-lg-margin: 12px;
 $grid-lg-gutters: 24px;
-$grid-lg-screen: $screen-lg - $grid-lg-margin-optical - $grid-lg-margin;
-$grid-lg-width: $grid-lg-screen - $grid-lg-margin-optical * 2;
+$grid-lg-width: $screen-lg - ($grid-lg-margin-optical * 2);
+$grid-lg-screen: $grid-lg-width + ($grid-lg-margin * 2);
 
 // Grid
 $grid-xl-initials: "xl";
-$grid-xl-margin-optical: 24px;
-$grid-xl-margin: 12px;
+$grid-xl-margin-optical: 12px;
+$grid-xl-margin: 8px;
 $grid-xl-gutters: 24px;
-$grid-xl-screen: $screen-xl - $grid-xl-margin-optical - $grid-xl-margin;
-$grid-xl-width: $grid-xl-screen - $grid-xl-margin-optical * 2;
+$grid-xl-width: $screen-xl - ($grid-xl-margin-optical * 2);
+$grid-xl-screen: $grid-xl-width + ($grid-xl-margin * 2);
 
 /*-- Breakpoints --*/
 // Transitional Extra Small to large phone;
