@@ -1,13 +1,14 @@
 
 # Plasma.css
-#####Flexible layouts framework for css.
+
+#### Flexible layouts framework for css.
 
 - Mobile-First 12 Column Grid
 - Based on Flexbox
 - Bootstrap 3 Compatible
 
 ## Features
-####Grid Layout using flexbox
+#### Grid Layout using flexbox
 
 | Feature       | Supported     | Status |
 | ------------- |:-------------:| -----:|
@@ -16,7 +17,7 @@
 | X-axis alignment | yes | Alpha |
 | Y-axis alignment | yes | Alpha |
 
-####Bootstrap 3 Compatible (optional)
+#### Bootstrap 3 Compatible (optional)
 
 ## Browser Support
 
