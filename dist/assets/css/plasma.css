@@ -1863,6 +1863,7 @@ body {
 
 .col-align-y-center {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -1873,6 +1874,7 @@ body {
 
 .col-align-y-fill {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
@@ -1978,6 +1980,7 @@ body {
 
 .stack-item-align-x-center {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -1988,6 +1991,7 @@ body {
 
 .stack-item-align-x-fill {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
