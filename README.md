@@ -59,10 +59,6 @@ $ http-server -p 1234
 
 [Twitter Bootstrap 3 Sass Version](https://github.com/twbs/bootstrap-sass) (optional)
 
-## Acknowledgements
-
-- Gulp tasks borrows and draws inspiration from [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate)
-
 ### Flexbox References
 
 [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) by Philip Walton
