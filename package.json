@@ -27,7 +27,6 @@
     "cssnano": "^3.5.2",
     "del": "^2.2.0",
     "factor-bundle": "^2.5.0",
-    "font-awesome": "^4.6.3",
     "glob": "^7.0.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "3.1.0",
