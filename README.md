@@ -16,48 +16,47 @@ npm install plasma.css
 ## Features
 #### Grid Layout using flexbox
 
-| Feature       | Supported     | Status |
-| ------------- |:-------------:| -----:|
-| 12 column grid | yes | Alpha |
-| Offsets and Insets | yes | planned |
-| X-axis alignment | yes | Alpha |
-| Y-axis alignment | yes | Alpha |
-
-#### Bootstrap 3 Compatible (optional)
+| Feature                  | Supported       | Release Status | Default   |  
+| :-------------           | :-------------: | :------------: | :-------: |  
+| Based on flexbox         | yes             | Alpha          | ✔         |  
+| Responsive               | yes             | Alpha          | ✔         |  
+| Bootstrap 3 Compatible   | yes             | Planned        | ✔         |  
+| 12 column fluid grid     | yes             | Alpha          | ✔         |  
+| 12 column fixed grid     | yes             | Alpha          | ✔         |  
+| Vertical grid columns    | yes             | Alpha          | ✔         |  
+| Space filling columns    | yes             | Alpha          | ✔         |  
+| Offsets and Insets       | yes             | Planned        | ✔         |  
+| X-axis Element alignment | yes             | Alpha          | ✔         |  
+| Y-axis Element alignment | yes             | Alpha          | ✔         |  
 
 ## Browser Support
 
 Flexbox Grid is depenedent on the CSS property flexbox. See [Can I use Flexbox?](http://caniuse.com/#feat=flexbox) for more details.
 
 ## Development
-<!--
-### Install Assemble
-```
-$ npm install --global assemble
 
-``` -->
-
-### Install Sass and compass
-```
-gem install sass
-
-gem install sass-globbing
+### Install the dependencies
 
 ```
-<!--
-### Start Server
+npm install
 ```
-$ npm install http-server -g
 
-$ http-server -p 1234
+### Start the app
 
-``` -->
-
+```
+npm run app:dev
+```
 
 ## Dependencies and integrations
+
+### Dependencies
 [normalize.css](https://github.com/necolas/normalize.css/)
 
+### Integrations
 [Twitter Bootstrap 3 Sass Version](https://github.com/twbs/bootstrap-sass) (optional)
+
+<!-- ## Acknowledgements References -->
+## References
 
 ### Flexbox References
 
