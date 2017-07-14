@@ -30,38 +30,32 @@ npm install plasma.css
 Flexbox Grid is depenedent on the CSS property flexbox. See [Can I use Flexbox?](http://caniuse.com/#feat=flexbox) for more details.
 
 ## Development
-<!--
-### Install Assemble
-```
-$ npm install --global assemble
 
-``` -->
-
-### Install Sass and compass
-```
-gem install sass
-
-gem install sass-globbing
+### Install the dependencies
 
 ```
-<!--
-### Start Server
+npm install
+
 ```
-$ npm install http-server -g
+### Start the app
 
-$ http-server -p 1234
+```
+npm run app:dev
 
-``` -->
+```
+
 
 
 ## Dependencies and integrations
+
+### Dependencies
 [normalize.css](https://github.com/necolas/normalize.css/)
 
+### Integrations
 [Twitter Bootstrap 3 Sass Version](https://github.com/twbs/bootstrap-sass) (optional)
 
-## Acknowledgements
-
-- Gulp tasks borrows and draws inspiration from [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate)
+<!-- ## Acknowledgements References -->
+## References
 
 ### Flexbox References
 
