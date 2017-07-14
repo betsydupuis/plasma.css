@@ -1,13 +1,20 @@
 
 # Plasma.css
-#####Flexible layouts framework for css.
-
+##### A robust, yet minimalist CSS grid framework based on Flexbox.
 - Mobile-First 12 Column Grid
 - Based on Flexbox
-- Bootstrap 3 Compatible
+- Bootstrap 3 Compatible (pending)
+
+## Installation
+
+Plasma.css can be installed as a package via [NPM](https://www.npmjs.com/)
+
+```
+npm install plasma.css
+``` 
 
 ## Features
-####Grid Layout using flexbox
+#### Grid Layout using flexbox
 
 | Feature       | Supported     | Status |
 | ------------- |:-------------:| -----:|
@@ -16,7 +23,7 @@
 | X-axis alignment | yes | Alpha |
 | Y-axis alignment | yes | Alpha |
 
-####Bootstrap 3 Compatible (optional)
+#### Bootstrap 3 Compatible (optional)
 
 ## Browser Support
 
@@ -51,10 +58,6 @@ $ http-server -p 1234
 [normalize.css](https://github.com/necolas/normalize.css/)
 
 [Twitter Bootstrap 3 Sass Version](https://github.com/twbs/bootstrap-sass) (optional)
-
-## Acknowledgements
-
-- Gulp tasks borrows and draws inspiration from [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate)
 
 ### Flexbox References
 
