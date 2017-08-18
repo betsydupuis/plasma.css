@@ -17,8 +17,11 @@
       "directory": "dist"
     },
     "assets": {},
-    "src": {
-      "scss": "./src/resume/index.scss"
+    "plasma": {
+      "scss": {
+        "src": "./src/plasma/plasma.scss",
+        "dist": "./dist/assets/css/plasma.css"
+      }
     }
   },
   "scripts": {
@@ -27,7 +30,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "html:index": "cp src/index.html dist/index.html",
     "html": "run-p html:index",
-    "scss:plasma": "node-sass ./src/plasma/plasma.scss  ./dist/assets/css/plasma.css",
+    "scss:plasma": "node-sass -o --source-map=true  $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
+    "postscss:plasma": "node-sass --watch --source-map=true $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
     "scss:docs": "node-sass ./src/docs/docs.scss  ./dist/assets/css/docs.css",
     "scss": "run-p scss:plasma scss:docs",
     "scss2": "cat src/plasma/plasma.scss | node-sass --source-map > dist/css/plasma.css",
