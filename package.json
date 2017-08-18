@@ -11,6 +11,16 @@
   "description": "A robust, yet minimalist CSS grid framework based on Flexbox.",
   "homepage": "http://betsydupuis.github.io/plasma.css/",
   "main": "index.js",
+  "config": {
+    "server": {
+      "port": 9800,
+      "directory": "dist"
+    },
+    "assets": {},
+    "src": {
+      "scss": "./src/resume/index.scss"
+    }
+  },
   "scripts": {
     "mkdir:dist": "mkdir -p dist/assets/{css,templates,images}",
     "clean:dist": "rm -rf dist && npm run mkdir:dist",
@@ -25,7 +35,7 @@
     "beautify:css": "js-beautify --css --replace ./dist/css/plasma.css",
     "postcss": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",
     "build:dist": "run-p clean:dist html css",
-    "server": "http-server dist",
+    "server": "http-server -p $npm_package_config_server_port $npm_package_config_server_directory",
     "app:dev": "run-p build:dist server",
     "start": "npm run app:dev",
     "predeploy": "npm install --force",
