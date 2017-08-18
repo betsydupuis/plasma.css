@@ -23,6 +23,7 @@
 @include columns-flexbox;
 
 @if $bootstrap3 == false {
+        $initial: $grid-xs-initials;
     .row {
         @extend .row-flex;
     }
@@ -30,7 +31,9 @@
     @include container-responsive($grid-xs-margin);
 
     @include grid-gutter($grid-xs-gutters);
-
+.gutters-#{$initial}{    
+    @include grid-gutter($grid-xs-gutters);
+}
     @include columns-fluid($grid-xs-initials, $grid-columns);
 
     @if $include-fixed-grid == true {
@@ -38,16 +41,19 @@
 
         @include column-height-fixed($grid-xs-initials, $grid-columns, $grid-xs-width);
 
-        @include columns-fixed($grid-xs-initials, $grid-columns, $grid-xs-width);
+        @include columns-fixed($grid-xs-initials, $grid-columns, $grid-xs-width, $grid-xs-gutters);
     }
 }
 
 // Small grid
 
 @media (min-width: $breakpoint-sm) {
+    $initial: $grid-sm-initials;
     @if $bootstrap3 == false {
         @include grid-gutter($grid-sm-gutters);
-
+        .gutters-#{$initial}{        
+            @include grid-gutter($grid-sm-gutters);
+        }
         @include columns-fluid($grid-sm-initials, $grid-columns);
 
         @include container-responsive($grid-sm-margin);
@@ -60,7 +66,7 @@
         }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed($grid-sm-initials, $grid-columns, $grid-sm-width);
+            @include columns-fixed($grid-sm-initials, $grid-columns, $grid-sm-width, $grid-sm-gutters);
 
             @include column-height-fixed($grid-sm-initials, $grid-columns, $grid-sm-width);
         }
@@ -69,9 +75,12 @@
 
 // Medium grid
 @media (min-width: $breakpoint-md) {
+    $initial: $grid-md-initials;
     @if $bootstrap3 == false {
         @include grid-gutter($grid-md-gutters);
-
+        .gutters-#{$initial}{        
+            @include grid-gutter($grid-md-gutters);
+        }
         @include columns-fluid($grid-md-initials, $grid-columns);
 
         @include container-responsive($grid-md-margin);
@@ -84,7 +93,7 @@
         }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed($grid-md-initials, $grid-columns, $grid-md-width);
+            @include columns-fixed($grid-md-initials, $grid-columns, $grid-md-width, $grid-md-gutters);
 
             @include column-height-fixed($grid-md-initials, $grid-columns, $grid-md-width);
         }
@@ -94,9 +103,12 @@
 /*-- Large grid --*/
 
 @media (min-width: $breakpoint-lg) {
+    $initial: $grid-lg-initials;
     @if $bootstrap3 == false {
-        @include grid-gutter($grid-gutter-width);
-
+        @include grid-gutter($grid-lg-gutters);
+        .gutters-#{$initial}{        
+            @include grid-gutter($grid-lg-gutters);
+        }
         @include columns-fluid($grid-lg-initials, $grid-columns);
 
         @include container-responsive($grid-sm-margin);
@@ -109,7 +121,7 @@
         }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed($grid-lg-initials, $grid-columns, $grid-lg-width);
+            @include columns-fixed($grid-lg-initials, $grid-columns, $grid-lg-width, $grid-lg-gutters);
 
             @include column-height-fixed($grid-lg-initials, $grid-columns, $grid-lg-width);
         }
@@ -119,9 +131,12 @@
 /*-- Large grid --*/
 
 @media (min-width: $breakpoint-xl) {
+    $initial: $grid-xl-initials;
     @if $bootstrap3 == false {
-        @include grid-gutter($grid-gutter-width);
-
+        @include grid-gutter($grid-xl-gutters);
+        .gutters-#{$initial}{        
+            @include grid-gutter($grid-xl-gutters);
+        }
         @include columns-fluid($grid-xl-initials, $grid-columns);
 
         @include container-responsive($grid-sm-margin);
@@ -134,7 +149,7 @@
         }
 
         @if $include-fixed-grid == true {
-            @include columns-fixed($grid-xl-initials, $grid-columns, $grid-xl-width);
+            @include columns-fixed($grid-xl-initials, $grid-columns, $grid-xl-width, $grid-xl-gutters);
 
             @include column-height-fixed($grid-xl-initials, $grid-columns, $grid-xl-width);
         }
