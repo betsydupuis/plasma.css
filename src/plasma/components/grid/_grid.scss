@@ -32,7 +32,7 @@
     }
 
     .container-fluid {
-        @include container-responsive($grid-xs-margin);
+        @include container-responsive($grid-xs-margin-optical);
     }
 
     @include grid-gutter($grid-xs-gutters);
@@ -67,7 +67,7 @@
         @include columns-fluid($grid-sm-initials, $grid-columns);
 
         .container-fluid {
-            @include container-responsive($grid-sm-margin);
+            @include container-responsive($grid-sm-margin-optical);
         }
 
         .sm-row-stacked {
@@ -100,7 +100,7 @@
         @include columns-fluid($grid-md-initials, $grid-columns);
 
         .container-fluid {
-            @include container-responsive($grid-md-margin);
+            @include container-responsive($grid-md-margin-optical);
         }
 
         .md-row-stacked {
@@ -134,7 +134,7 @@
         @include columns-fluid($grid-lg-initials, $grid-columns);
 
         .container-fluid {
-            @include container-responsive($grid-sm-margin);
+            @include container-responsive($grid-sm-margin-optical);
         }
 
         .lg-row-stacked {
@@ -168,7 +168,7 @@
         @include columns-fluid($grid-xl-initials, $grid-columns);
 
         .container-fluid {
-            @include container-responsive($grid-sm-margin);
+            @include container-responsive($grid-sm-margin-optical);
         }
 
         .lg-row-stacked {
