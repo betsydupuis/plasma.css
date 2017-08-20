@@ -19,8 +19,20 @@
     "assets": {},
     "plasma": {
       "scss": {
+        "paths": [
+          "./node_modules",
+          "./src"
+        ],
         "src": "./src/plasma/plasma.scss",
         "dist": "./dist/assets/css/plasma.css"
+      },
+      "html": {
+        "paths": [
+          "./node_modules",
+          "./src"
+        ],
+        "src": "./src/index.html",
+        "dist": "./dist/index.html"
       }
     }
   },
@@ -28,10 +40,11 @@
     "mkdir:dist": "mkdir -p dist/assets/{css,templates,images}",
     "clean:dist": "rm -rf dist && npm run mkdir:dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "html:index": "cp src/index.html dist/index.html",
+    "html:index": "cpx ./src/index.html ./dist",
+    "posthtml:index": "cpx ./src/index.html ./dist --watch",
     "html": "run-p html:index",
-    "scss:plasma": "node-sass -o --source-map=true  $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
-    "postscss:plasma": "node-sass --watch --source-map=true $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
+    "scss:plasma": "node-sass --include-path=$npm_package_config_plasma_scss_paths -o --source-map=true  $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
+    "postscss:plasma": "node-sass --include-path=$npm_package_config_plasma_scss_paths --watch -r --source-map=true $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
     "scss:docs": "node-sass ./src/docs/docs.scss  ./dist/assets/css/docs.css",
     "scss": "run-p scss:plasma scss:docs",
     "scss2": "cat src/plasma/plasma.scss | node-sass --source-map > dist/css/plasma.css",
@@ -47,6 +60,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "cpx": "^1.5.0",
     "cssnano": "^3.10.0",
     "glob": "^7.1.2",
     "http-server": "^0.10.0",
@@ -54,7 +68,7 @@
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
     "normalize.css": "^3.0.3",
-    "run-p": "^4.0.2",
+    "npm-run-all": "^4.0.2",
     "postcss": "^6.0.5",
     "postcss-cli": "^4.1.0",
     "postcss-discard-comments": "^2.0.4",
@@ -62,7 +76,9 @@
     "rimraf": "^2.6.1",
     "watch": "^1.0.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "minimatch": "^3.0.4"
+  },
   "keywords": [
     "plasma",
     "plasma.css",
