@@ -8,7 +8,9 @@
     @include viewport-full-height;
 }
 
-@include containers-fluid;
+.container-fluid {
+    @include containers-fluid;
+}
 
 @include containers-flexbox;
 
@@ -23,17 +25,22 @@
 @include columns-flexbox;
 
 @if $bootstrap3 == false {
-        $initial: $grid-xs-initials;
+    $initial: $grid-xs-initials;
+
     .row {
         @extend .row-flex;
     }
 
-    @include container-responsive($grid-xs-margin);
+    .container-fluid {
+        @include container-responsive($grid-xs-margin);
+    }
 
     @include grid-gutter($grid-xs-gutters);
-.gutters-#{$initial}{    
-    @include grid-gutter($grid-xs-gutters);
-}
+
+    .container-#{$initial} {
+        @include grid-gutter($grid-xs-gutters);
+    }
+
     @include columns-fluid($grid-xs-initials, $grid-columns);
 
     @if $include-fixed-grid == true {
@@ -49,18 +56,24 @@
 
 @media (min-width: $breakpoint-sm) {
     $initial: $grid-sm-initials;
+
     @if $bootstrap3 == false {
         @include grid-gutter($grid-sm-gutters);
-        .gutters-#{$initial}{        
+
+        .container-#{$initial} {
             @include grid-gutter($grid-sm-gutters);
         }
+
         @include columns-fluid($grid-sm-initials, $grid-columns);
 
-        @include container-responsive($grid-sm-margin);
-        
+        .container-fluid {
+            @include container-responsive($grid-sm-margin);
+        }
+
         .sm-row-stacked {
             @include row-stacked;
         }
+
         .sm-row-unstacked {
             @include row-unstacked;
         }
@@ -76,18 +89,24 @@
 // Medium grid
 @media (min-width: $breakpoint-md) {
     $initial: $grid-md-initials;
+
     @if $bootstrap3 == false {
         @include grid-gutter($grid-md-gutters);
-        .gutters-#{$initial}{        
+
+        .container-#{$initial} {
             @include grid-gutter($grid-md-gutters);
         }
+
         @include columns-fluid($grid-md-initials, $grid-columns);
 
-        @include container-responsive($grid-md-margin);
-        
+        .container-fluid {
+            @include container-responsive($grid-md-margin);
+        }
+
         .md-row-stacked {
             @include row-stacked;
         }
+
         .md-row-unstacked {
             @include row-unstacked;
         }
@@ -104,18 +123,24 @@
 
 @media (min-width: $breakpoint-lg) {
     $initial: $grid-lg-initials;
+
     @if $bootstrap3 == false {
         @include grid-gutter($grid-lg-gutters);
-        .gutters-#{$initial}{        
+
+        .container-#{$initial} {
             @include grid-gutter($grid-lg-gutters);
         }
+
         @include columns-fluid($grid-lg-initials, $grid-columns);
 
-        @include container-responsive($grid-sm-margin);
-        
+        .container-fluid {
+            @include container-responsive($grid-sm-margin);
+        }
+
         .lg-row-stacked {
             @include row-stacked;
         }
+
         .lg-row-unstacked {
             @include row-unstacked;
         }
@@ -132,18 +157,24 @@
 
 @media (min-width: $breakpoint-xl) {
     $initial: $grid-xl-initials;
+
     @if $bootstrap3 == false {
         @include grid-gutter($grid-xl-gutters);
-        .gutters-#{$initial}{        
+
+        .container-#{$initial} {
             @include grid-gutter($grid-xl-gutters);
         }
+
         @include columns-fluid($grid-xl-initials, $grid-columns);
 
-        @include container-responsive($grid-sm-margin);
-        
+        .container-fluid {
+            @include container-responsive($grid-sm-margin);
+        }
+
         .lg-row-stacked {
             @include row-stacked;
         }
+
         .lg-row-unstacked {
             @include row-unstacked;
         }

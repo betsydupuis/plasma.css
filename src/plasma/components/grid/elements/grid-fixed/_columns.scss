@@ -8,7 +8,7 @@
 
     @for $i from 1 through $column-count {
         .#{$initials}-fixed-#{$i} {
-        	$gutter-adjustment: ($gutter-width * (1 + $i -1));
+        	$gutter-adjustment: ($gutter-width * $i);
         	$column-width: $base-column-width * $i;
         	$column-with-gutters: $column-width + $gutter-adjustment;
             
