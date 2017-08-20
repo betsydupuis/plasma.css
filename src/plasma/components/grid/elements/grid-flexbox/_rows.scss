@@ -1,9 +1,9 @@
 // Rows
 @mixin row-flex {
-    align-content: flex-start;
-    align-items: stretch;
+    // align-content: flex-start;
+    // align-items: stretch;
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
     flex-wrap: wrap;
     min-height: 1px;
     position: relative;
