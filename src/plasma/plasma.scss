@@ -1,12 +1,14 @@
+@import "./node_modules/normalize.css/normalize";
+
 //===========================
 // Base
 //===========================
-@import "base/base";
+@import "base/_base.scss";
 
 //===========================
 // Components
 //===========================
-@import "components/components";
+@import "components/_components.scss";
 
 //===========================
 // Helpers

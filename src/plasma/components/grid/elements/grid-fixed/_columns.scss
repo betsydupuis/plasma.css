@@ -4,26 +4,15 @@
 
 @mixin columns-fixed($initials, $column-count, $grid-width, $gutter-width) {
 	$gutter-count: $column-count - 1 ;
-	// $gutter-width: 36px;
 	$base-column-width: (($gutter-count * $gutter-width) - $grid-width) / $column-count * -1;
-        	@debug(#{$initials} + 'base' + $base-column-width);
 
     @for $i from 1 through $column-count {
         .#{$initials}-fixed-#{$i} {
-        	$gutter-adjustment: ($gutter-width * (1 + $i -1));
-        	@debug(#{$initials} + 'gutter' + $gutter-adjustment);
-        	@debug(#{$initials} + 'total' + $grid-width);
-
-     
+        	$gutter-adjustment: ($gutter-width * $i);
         	$column-width: $base-column-width * $i;
-        	@debug(#{$initials} + 'column' + $column-width);
         	$column-with-gutters: $column-width + $gutter-adjustment;
-        	@debug(#{$initials} + '$column-with-gutters' + $column-with-gutters);
-            // width: $i * $scale;
-            // (1404-(84*12))/36 = 11
-             // (1404-(84*12))/36 = 11
+            
 			width: $column-with-gutters;
-            // @include make-column-fixed($i / $column-count, $grid-width);
         }
     }
 }

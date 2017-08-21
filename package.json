@@ -74,6 +74,7 @@
     "watch-scss": "run-p watch-scss:plasma watch-scss:docs",
     "css": "run-p scss",
     "postcss": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",    
+    "prewatch-css": "npm run css",
     "watch-css": "run-p watch-scss",
     "postwatch-css": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",
     "build:dev": "run-p clean:dist watch-html watch-css",
@@ -86,7 +87,7 @@
     "predeploy-gh-pages": "npm install --force",
     "deploy-gh-pages": "git subtree push --prefix dist origin gh-pages",
     "predeploy-npm": "npm install --force",
-    "deploy-npm": "npm-run-all  "
+    "deploy-npm": "npm-run-all "
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",

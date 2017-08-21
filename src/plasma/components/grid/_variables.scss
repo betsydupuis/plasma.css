@@ -53,7 +53,6 @@ $grid-lg-margin: 12px;
 $grid-lg-gutters: 24px;
 $grid-lg-width: $screen-lg - ($grid-lg-margin-optical * 2);
 $grid-lg-screen: ($grid-lg-margin * 2) + $grid-lg-width;
-@debug($grid-lg-width);
 
 // Grid
 $grid-xl-initials: "xl";
@@ -61,7 +60,6 @@ $grid-xl-margin-optical: 18px;
 $grid-xl-margin: 8px;
 $grid-xl-gutters: 36px;
 $grid-xl-width: $screen-xl - ($grid-xl-margin-optical * 2);
-
 $grid-xl-screen: ($grid-xl-margin * 2) + $grid-xl-width;
 
 /*-- Breakpoints --*/
