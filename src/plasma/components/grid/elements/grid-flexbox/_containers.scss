@@ -1,7 +1,0 @@
-//Containers
-
-@mixin containers-flexbox {
-    .container-nested {
-        @include make-col-flex;
-    }
-}
