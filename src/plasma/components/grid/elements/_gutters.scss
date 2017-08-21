@@ -3,7 +3,6 @@
 }
 
 @mixin row-gutter($gutter-width) {
-
     @include make-margin-x($gutter-width / 2 * -1);
 }
 
@@ -16,7 +15,6 @@
 }
 
 @mixin col-gutter($grid-gutter-width) {
-
     @include make-padding-x($grid-gutter-width / 2);
 }
 
@@ -24,8 +22,23 @@
     .row {
         @include row-gutter($dimension);
     }
+
     .col {
         @include col-gutter($dimension);
+    }
+}
+
+@mixin grid-gutter-fixed($dimension) {
+    .row {
+        @include row-gutter($dimension);
+    }
+
+    .col {
+        @include col-gutter($dimension);
+    }
+
+    .gutters-#{$initial} {
+        @include grid-gutter($grid-xl-gutters);
     }
 }
 
@@ -34,7 +47,7 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
 
-        >.col {
+        > .col {
             padding-left: 0 !important;
             padding-right: 0 !important;
         }

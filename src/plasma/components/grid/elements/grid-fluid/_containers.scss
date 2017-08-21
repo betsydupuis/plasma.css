@@ -1,14 +1,10 @@
 // Grid Containers
 
 @mixin containers-fluid {
-    .container-fluid {
-        position: relative;
-        margin: 0 auto;
-    }
+    position: relative;
+    margin: 0 auto;
 }
 
 @mixin container-responsive($margin) {
-    .container-fluid {
         @include make-padding-x($margin);
-    }
 }
