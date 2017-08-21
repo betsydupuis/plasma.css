@@ -34,6 +34,28 @@
         "src": "./src/index.html",
         "dist": "./dist/index.html"
       }
+    },
+    "docs": {
+      "scss": {
+        "paths": [
+          "./node_modules",
+          "./src"
+        ],
+        "src": "./src/docs/docs.scss",
+        "dist": "./dist/assets/css/docs.css"
+      },
+      "html": {
+      }
+    },
+    "dist": {
+      "scss": {
+        "paths": [
+          "./"
+        ],
+        "src": "./dist/assets/css/plasma.css",
+        "dist": "./",
+        "distmin": "./plasma.min.css"
+      }
     }
   },
   "scripts": {
@@ -41,22 +63,30 @@
     "clean:dist": "rm -rf dist && npm run mkdir:dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "html:index": "cpx ./src/index.html ./dist",
-    "posthtml:index": "cpx ./src/index.html ./dist --watch",
+    "watch-html:index": "cpx ./src/index.html ./dist --watch",
     "html": "run-p html:index",
+    "watch-html": "run-p watch-html:index",
     "scss:plasma": "node-sass --include-path=$npm_package_config_plasma_scss_paths -o --source-map=true  $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
-    "postscss:plasma": "node-sass --include-path=$npm_package_config_plasma_scss_paths --watch -r --source-map=true $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
-    "scss:docs": "node-sass ./src/docs/docs.scss  ./dist/assets/css/docs.css",
+    "watch-scss:plasma": "node-sass --include-path=$npm_package_config_plasma_scss_paths --watch -r --source-map=true $npm_package_config_plasma_scss_src $npm_package_config_plasma_scss_dist ",
+    "scss:docs": "node-sass --include-path=$npm_package_config_docs_scss_paths -o --source-map=true  $npm_package_config_docs_scss_src $npm_package_config_docs_scss_dist ",
+    "watch-scss:docs": "node-sass --include-path=$npm_package_config_docs_scss_paths --watch -r --source-map=true $npm_package_config_docs_scss_src $npm_package_config_docs_scss_dist ",
     "scss": "run-p scss:plasma scss:docs",
-    "scss2": "cat src/plasma/plasma.scss | node-sass --source-map > dist/css/plasma.css",
+    "watch-scss": "run-p watch-scss:plasma watch-scss:docs",
     "css": "run-p scss",
-    "beautify:css": "js-beautify --css --replace ./dist/css/plasma.css",
-    "postcss": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",
-    "build:dist": "run-p clean:dist html css",
+    "postcss": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",    
+    "watch-css": "run-p watch-scss",
+    "postwatch-css": "postcss --use autoprefixer  --replace ./dist/assets/css/*.css",
+    "build:dev": "run-p clean:dist watch-html watch-css",
+    "prebuild:dist": "npm run css",
+    "build:dist": "cpx $npm_package_config_dist_scss_src  $npm_package_config_dist_scss_dist",
+    "postbuild:dist": "postcss $npm_package_config_dist_scss_src  --use autoprefixer cssnano -o $npm_package_config_dist_scss_distmin",
     "server": "http-server -p $npm_package_config_server_port $npm_package_config_server_directory",
-    "app:dev": "run-p build:dist server",
+    "app:dev": "run-p build:dev server",
     "start": "npm run app:dev",
-    "predeploy": "npm install --force",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "predeploy-gh-pages": "npm install --force",
+    "deploy-gh-pages": "git subtree push --prefix dist origin gh-pages",
+    "predeploy-npm": "npm install --force",
+    "deploy-npm": "npm-run-all  "
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
