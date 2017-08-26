@@ -36,7 +36,8 @@ $grid-sm-gutters: 24px;
 // $grid-sm-screen: $screen-sm;
 // $grid-sm-width: $grid-sm-screen - $grid-sm-margin-optical * 2;
 $grid-sm-width: $screen-sm - ($grid-sm-margin-optical * 2);
-$grid-sm-screen: ($grid-sm-margin * 2) + $grid-sm-width;
+// $grid-sm-screen: ($grid-sm-margin * 2) + $grid-sm-width;
+$grid-sm-screen: $screen-sm;
 
 // Grid
 $grid-md-initials: "md";
@@ -44,7 +45,8 @@ $grid-md-margin-optical: 20px;
 $grid-md-margin: 12px;
 $grid-md-gutters: 24px;
 $grid-md-width: $screen-md - ($grid-md-margin-optical * 2);
-$grid-md-screen: ($grid-md-margin * 2) + $grid-md-width;
+// $grid-md-screen: ($grid-md-margin * 2) + $grid-md-width;
+$grid-md-screen: $screen-md;
 
 // Grid
 $grid-lg-initials: "lg";
@@ -52,7 +54,8 @@ $grid-lg-margin-optical: 76px;
 $grid-lg-margin: 12px;
 $grid-lg-gutters: 24px;
 $grid-lg-width: $screen-lg - ($grid-lg-margin-optical * 2);
-$grid-lg-screen: ($grid-lg-margin * 2) + $grid-lg-width;
+// $grid-lg-screen: ($grid-lg-margin * 2) + $grid-lg-width;
+$grid-lg-screen: $screen-lg;
 
 // Grid
 $grid-xl-initials: "xl";
@@ -60,7 +63,8 @@ $grid-xl-margin-optical: 18px;
 $grid-xl-margin: 8px;
 $grid-xl-gutters: 36px;
 $grid-xl-width: $screen-xl - ($grid-xl-margin-optical * 2);
-$grid-xl-screen: ($grid-xl-margin * 2) + $grid-xl-width;
+// $grid-xl-screen: ($grid-xl-margin * 2) + $grid-xl-width;
+$grid-xl-screen: $screen-xl;
 
 /*-- Breakpoints --*/
 
