@@ -29,12 +29,20 @@
         .#{$screen-size}-center-x {
             margin-left: auto;
             margin-right: auto;
+            &-unset {
+                margin-left: unset;
+                margin-right: unset;
+            }
         }
 
         .#{$screen-size}-center-y {
-            margin-left: auto;
-            margin-right: auto;
+            margin-top: auto;
+            &-unset {
+                margin-top: unset;
+                margin-bottom: unset;
+            }
         }
+
 
         .#{$screen-size}-inset-#{$i} {
             @include make-inset-fluid($i / $column-count);
