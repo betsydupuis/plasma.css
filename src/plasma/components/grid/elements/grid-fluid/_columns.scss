@@ -26,6 +26,16 @@
             @include make-offset-fluid($i / $column-count);
         }
 
+        .#{$screen-size}-center-x {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .#{$screen-size}-center-y {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .#{$screen-size}-inset-#{$i} {
             @include make-inset-fluid($i / $column-count);
         }
